@@ -38,3 +38,25 @@ nav ul li a {
   text-decoration: none;
   color: #333;
 }
+/* main content styles */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+/* feature styles */
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.feature {
+  flex: 1;
+  padding: 1rem;
+}
+/* footer styles */
+footer {
+  background-color: #f4f4f4;
+  padding: 1rem 0;
+  text-align: center;
+}
