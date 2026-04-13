@@ -3,57 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage | Great Solutions</title>
-    <link rel="stylesheet" href="/CSS/style.css" />
+    <title>Great Stationery Picks | Great Solutions</title>
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="top-nav">
         <div class="logo">Great Solutions</div>
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/shop">Shop</a></li>
           <li><a href="/blog">Blog</a></li>
+          <li><a href="/education">Education</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="hero">
-        <h1>Welcome to Great Solutions</h1>
-        <p>Your partner in innovative technology solutions.</p>
-        <a href="/services" class="btn">Explore Our Services</a>
+        <div class="hero-copy">
+          <p class="eyebrow">Stationery for study, work, and creativity</p>
+          <h1>Curated stationery picks for organized minds.</h1>
+          <p class="hero-text">
+            Discover the best notebooks, pens, desk tools, and study essentials
+            with honest reviews, buying guides, and education tips.
+          </p>
+          <div class="hero-actions">
+            <a href="/shop" class="btn btn-primary">Shop Best Picks</a>
+            <a href="/blog" class="btn btn-secondary">Read the Latest Guide</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="mockup-card">
+            <span>Top Featured</span>
+            <h2>Premium Study Set</h2>
+            <p>
+              Shop curated stationery bundles handpicked for students and
+              creatives.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section class="features">
-        <div class="feature">
-          <h2>Custom Software Development</h2>
-          <p>Tailored software solutions to meet your unique business needs.</p>
+      <section class="categories">
+        <div class="section-header">
+          <h2>Popular stationery categories</h2>
+          <p>
+            Browse curated collections of tools that make note-taking, planning,
+            and learning easier.
+          </p>
         </div>
-        <div class="feature">
-          <h2>Cloud Services</h2>
-          <p>Scalable and secure cloud solutions for your business growth.</p>
+        <div class="category-grid">
+          <article class="category-card">
+            <h3>Notebooks</h3>
+            <p>Softcover, dotted, and guided notebooks for every workflow.</p>
+          </article>
+          <article class="category-card">
+            <h3>Writing essentials</h3>
+            <p>Gel pens, fineliners, highlighters, and value sets.</p>
+          </article>
+          <article class="category-card">
+            <h3>Desk organization</h3>
+            <p>Planners, desk trays, pencil cases, and stylish storage.</p>
+          </article>
+          <article class="category-card">
+            <h3>Study kits</h3>
+            <p>Everything students need for school and exam prep.</p>
+          </article>
         </div>
-        <div class="feature">
-          <h2>IT Consulting</h2>
-          <p>Expert advice to optimize your IT infrastructure and strategy.</p>
+      </section>
+
+      <section class="featured-products">
+        <div class="section-header">
+          <h2>Featured stationery picks</h2>
+          <p>Our top reviewed products for quality, style, and everyday use.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Classic Hardcover Notebook</h3>
+            <p>
+              Durable pages and a clean layout ideal for journaling and
+              planning.
+            </p>
+            <a href="/shop/notebooks" class="btn btn-tertiary">Shop notebook</a>
+          </article>
+          <article class="product-card">
+            <h3>Precision gel pen set</h3>
+            <p>Smooth ink flow for notes, sketches, and classroom review.</p>
+            <a href="/shop/pens" class="btn btn-tertiary">Shop pens</a>
+          </article>
+          <article class="product-card">
+            <h3>Study power bundle</h3>
+            <p>Curated stationery kit with planner, sticky notes, and more.</p>
+            <a href="/shop/kits" class="btn btn-tertiary">View kit</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="blog-preview">
+        <div class="section-header">
+          <h2>From the blog</h2>
+          <p>
+            Read guides and reviews that help you choose the best stationery for
+            learning and productivity.
+          </p>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card">
+            <h3>How to build a student-friendly desk setup</h3>
+            <p>
+              Simple, affordable stationery items that improve focus and
+              comfort.
+            </p>
+          </article>
+          <article class="blog-card">
+            <h3>Best notebooks for note-taking in 2026</h3>
+            <p>
+              Compare paper weight, size, and layout to find your ideal
+              notebook.
+            </p>
+          </article>
+          <article class="blog-card">
+            <h3>Study tips with stationery you already own</h3>
+            <p>
+              Learn how the right tools can make study sessions more effective.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="education-resources">
+        <div class="section-header">
+          <h2>Education resources</h2>
+          <p>Practical advice for students, teachers, and lifelong learners.</p>
+        </div>
+        <div class="resource-list">
+          <div>
+            <h3>Study planner templates</h3>
+            <p>
+              Download free layouts for scheduling, revision, and goal setting.
+            </p>
+          </div>
+          <div>
+            <h3>Note-taking strategies</h3>
+            <p>Discover methods for efficient learning and memory retention.</p>
+          </div>
+          <div>
+            <h3>Back-to-school buying guide</h3>
+            <p>Find the best stationery essentials for every age and budget.</p>
+          </div>
         </div>
       </section>
     </main>
+
     <footer>
-      <p>
-        <strong>Affiliate Disclosure:</strong> We may earn a commission from
-        qualifying purchases.
+      <div class="footer-content">
+        <div>
+          <p>
+            <strong>Affiliate Disclosure:</strong> Some links are affiliate
+            links. We may earn a commission at no extra cost to you.
+          </p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/education">Education</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-note">
+        &copy; 2026 Great Solutions. All rights reserved.
       </p>
-      <p>&copy; 2024 Great Solutions. All rights reserved.</p>
-      <!-- footer navigation -->
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">Legal</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
     </footer>
   </body>
 </html>
