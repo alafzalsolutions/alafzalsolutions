@@ -4,57 +4,86 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Al Afzal Solutions</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LY63J1JT2C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-LY63J1JT2C");
+    </script>
   </head>
   <link rel="stylesheet" href="/CSS/style.css" />
   <body>
     <header>
       <!-- build a professional, simple, standard and modern header with a navigation bar of home, about, and blog pages, include a logo placeholder. Write the industry-standard HTML for a header. -->
       <div class="logo">
-        <img src="logo-placeholder.png" alt="Al Afzal Solutions Logo" />
+        <img src="#logo" alt="Logo" />
       </div>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#products">Products</a></li>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- Update the hero paragraph as per described; a platform to share knowledge and educate people through blog articles on learning techniques, and tech trends, tech history, and so on.-->
 
-    <section id="hero">
-      <div class="hero-content">
+    <main>
+      <!-- Create a hero section, and other sections according to the professional look of an affiliate website. -->
+      <section class="hero">
         <h1>Welcome to Al Afzal Solutions</h1>
         <p>
-          Better tools lead to better thinking. Here, you'll find detailed
-          stationery reviews, thoughtful tech history, and forward-looking
-          trends—plus infrequent, honest updates on the software products I'm
-          developing for creative work. Stay tuned, the site is still in its
-          early stages, It will be complete with it's bearable design under some
-          months, and under an year, it would be a hub of knowledge. There will
-          be blog articles on learning techniques, tech trends, tech history,
-          and product reviews. I hope you find the content valuable and engaging
-          as I continue to build and grow this platform.
+          Your go-to platform for sharing knowledge and educating people through
+          insightful blog articles on learning techniques, tech trends, tech
+          history, and more.
         </p>
-      </div>
-      <div class="hero-image">
-        <img src="" alt="Hero Image" />
-      </div>
-    </section>
-
-    <section id="products">
-      <h2>Featured Articles</h2>
-      <!-- Article highlights will go here -->
-    </section>
-
-    <section id="blog">
-      <h2>Latest Blog Posts</h2>
-      <!-- Blog posts will go here -->
-    </section>
+      </section>
+      <section class="featured-articles">
+        <h2>Featured Articles</h2>
+        <article>
+          <h3>Top 10 Learning Techniques for Effective Studying</h3>
+          <p>
+            Discover the most effective learning techniques to enhance your
+            study sessions and retain information better.
+          </p>
+          <a href="/blog/learning-techniques">Read More</a>
+        </article>
+        <article>
+          <h3>The Latest Tech Trends in 2024</h3>
+          <p>
+            Stay updated with the latest technology trends that are shaping the
+            future of the industry.
+          </p>
+          <a href="/blog/tech-trends-2024">Read More</a>
+        </article>
+        <article>
+          <h3>A Brief History of Technology</h3>
+          <p>
+            Explore the fascinating history of technology and how it has evolved
+            over the years.
+          </p>
+          <a href="/blog/tech-history">Read More</a>
+        </article>
+      </section>
+    </main>
 
     <footer>
+      <ul>
+        <li><a href="#">legal</a></li>
+        <li><a href="#">affiliate disclosure</a></li>
+        <li><a href="#">privacy policy</a></li>
+      </ul>
       <p>&copy; 2024 Al Afzal Solutions. All rights reserved.</p>
     </footer>
   </body>

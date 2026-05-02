@@ -1,21 +1,36 @@
-/* professional, and standard header keep the design simple and clean. keep the structure responsive.*/
+:root {
+  --bg-main: #f8f9fa; /* Off-white for readability */
+  --bg-card: #ffffff; /* Pure white for content areas */
+  --text-primary: #212529; /* Dark gray for main text */
+  --text-secondary: #6c757d; /* Medium gray for secondary text */
+  /* Brand/Trust Color (30% of design) */
+  --primary: #00246b; /* Deep Navy (Professional/Credible) */
+  --primary-light: #cadcfc; /* Soft blue for backgrounds/hover states */
+
+  /* Action/Conversion Color (10% of design) */
+  --accent-cta: #ff6b35; /* High-contrast Orange for "Buy Now" buttons */
+  --accent-hover: #e85a2c; /* Slightly darker for hover feedback */
+}
 body {
-  font-family: Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
 }
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* design the navigation bar*/
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
 }
@@ -23,18 +38,16 @@ nav ul {
 nav {
   display: flex;
   justify-content: center;
-  background-color: #444;
 }
 
 nav a {
-  color: #fff;
-  padding: 14px 20px;
+  margin: 5px;
+  padding: 3px 6px;
+  border: #212529 solid 1px;
+  border-radius: 3px;
   text-decoration: none;
   text-align: center;
 }
 nav a:hover {
   background-color: #555;
-}
-main {
-  padding: 20px;
 }
