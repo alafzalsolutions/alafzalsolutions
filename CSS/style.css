@@ -24,7 +24,7 @@ header {
   background-color: var(--bg-card);
   color: var(--text-primary);
   border-bottom: 1px solid #e0e0e0;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +35,9 @@ header {
   font-weight: bold;
   color: var(--primary);
   text-decoration: none;
+}
+.logo a span {
+  color: var(--accent-cta);
 }
 /* design the navigation bar*/
 nav ul {
@@ -51,20 +54,57 @@ nav {
 nav a {
   margin: 5px;
   padding: 3px 6px;
-  border: #212529 solid 1px;
-  border-radius: 3px;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: var(--accent-cta);
   text-align: center;
+  font-weight: bold;
+  color: var(--primary);
 }
 nav a:hover {
-  background-color: #555;
+  text-decoration: underline;
+  color: var(--accent-hover);
+  text-decoration-color: var(--primary);
+}
+main {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+#hero {
+  background-image: image(
+    url("/assets/images/hero-bg.jpg") no-repeat center center/cover
+  );
+  width: 100%;
+  /* background-color: red; */
+  z-index: -1;
+}
+.flex {
+  display: flex;
+  margin-top: 1rem;
+}
+.left-content {
+  padding-right: 1rem;
+  max-width: 70%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+.right-content {
+  max-width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.right-content img {
+  width: 250px;
+  border-radius: 50%;
+}
+.footer {
+  border-top: 1px solid #e0e0e0;
 }
 .footer ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
   padding: 1rem 0;
-  border-top: 1px solid #e0e0e0;
 }
 .footer ul li {
   margin: 0 1rem;
@@ -81,6 +121,5 @@ nav a:hover {
 .footer p {
   text-align: center;
   color: var(--text-secondary);
-  margin: 0;
-  padding: 0.5rem 0;
+  margin-top: 10px;
 }

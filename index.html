@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Al Afzal Solutions</title>
+    <title>Homepage | Al Afzal Solutions</title>
+    <!-- Google tag (gtag.js) -->
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-LY63J1JT2C"
+      src="https://www.googletagmanager.com/gtag/js?id=G-W001G210B8"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -16,7 +17,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-LY63J1JT2C");
+      gtag("config", "G-W001G210B8");
     </script>
   </head>
   <link rel="stylesheet" href="/CSS/style.css" />
@@ -24,15 +25,14 @@
     <header>
       <!-- build a professional, simple, standard and modern header with a navigation bar of home, about, and blog pages, include a logo placeholder. Write the industry-standard HTML for a header. -->
       <div class="logo">
-        <a href="/home">Al Afzal Solutions</a>
+        <a href="/index.html  ">Al Afzal <span>Solutions</span></a>
       </div>
       <nav>
         <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/products.html">Products</a></li>
         </ul>
       </nav>
     </header>
@@ -41,14 +41,22 @@
 
     <main>
       <!-- Create a hero section, and other sections according to the professional look of an affiliate website. -->
-      <section class="hero">
-        <h1>Welcome to Al Afzal Solutions</h1>
-        <p>
-          Your go-to platform for sharing knowledge and educating people through
-          insightful blog articles on learning techniques, tech trends, tech
-          history, and more.
-        </p>
+      <section id="hero">
+        <div class="flex">
+          <div class="left-content">
+            <h1>Welcome to Al Afzal Solutions</h1>
+            <p>
+              Your go-to platform for sharing knowledge and educating people
+              through insightful blog articles on learning techniques, tech
+              trends, tech history, and more.
+            </p>
+          </div>
+          <div class="right-content">
+            <img src="/assets/images/hero.jpg" alt="Hero Image" />
+          </div>
+        </div>
       </section>
+
       <section class="featured-articles">
         <h2>Featured Articles</h2>
         <article>
@@ -79,10 +87,15 @@
     </main>
 
     <footer class="footer">
+      <p>
+        <b>Affiliate Disclosure:</b>We may earn a commission from qualifying
+        purchases.
+      </p>
       <ul>
         <li><a href="#">Legal</a></li>
-        <li><a href="#">Affiliate Disclosure</a></li>
+        <!-- <li><a href="#">Affiliate Disclosure</a></li> -->
         <li><a href="#">Privacy Policy</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
       <p>&copy; 2024 Al Afzal Solutions. All rights reserved.</p>
     </footer>
