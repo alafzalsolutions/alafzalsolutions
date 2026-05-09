@@ -1,0 +1,80 @@
+/* =========================================
+   GLOBAL TYPOGRAPHY
+========================================= */
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+}
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+}
+
+h5 {
+  font-size: var(--fs-md);
+}
+
+h6 {
+  font-size: var(--fs-base);
+}
+
+/* =========================================
+   PARAGRAPHS
+========================================= */
+
+p {
+  color: var(--color-text-light);
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}

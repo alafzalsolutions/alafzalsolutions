@@ -1,0 +1,85 @@
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+/* =========================================
+   SECTION SPACING
+========================================= */
+
+.section {
+  padding-block: var(--space-7);
+}
+
+/* =========================================
+   FLEX UTILITIES
+========================================= */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================================
+   GRID UTILITIES
+========================================= */
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* =========================================
+   TEXT UTILITIES
+========================================= */
+
+.text-center {
+  text-align: center;
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+/* =========================================
+   SPACING UTILITIES
+========================================= */
+
+.mb-1 {
+  margin-bottom: var(--space-1);
+}
+
+.mb-2 {
+  margin-bottom: var(--space-2);
+}
+
+.mb-3 {
+  margin-bottom: var(--space-3);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+
+/* =========================================
+   HIDE ELEMENT
+========================================= */
+
+.hidden {
+  display: none;
+}

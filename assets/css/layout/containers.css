@@ -1,0 +1,27 @@
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+/* =========================================
+   NARROW CONTAINER
+   (Great for articles)
+========================================= */
+
+.container-sm {
+  width: min(100% - 2rem, 800px);
+  margin-inline: auto;
+}
+
+/* =========================================
+   LARGE CONTAINER
+========================================= */
+
+.container-lg {
+  width: min(100% - 2rem, 1400px);
+  margin-inline: auto;
+}

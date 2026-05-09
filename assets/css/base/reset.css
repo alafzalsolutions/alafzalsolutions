@@ -1,0 +1,89 @@
+/* =========================================   CSS RESET   ========================================= */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default spacing */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Smooth scrolling */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Body defaults */
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Better image defaults */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form controls */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove list styles */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default link styling */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Better button behavior */
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Improve text wrapping */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}

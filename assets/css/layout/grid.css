@@ -1,0 +1,64 @@
+/* =========================================
+   RESPONSIVE GRID SYSTEM
+========================================= */
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* =========================================
+   2 COLUMN GRID
+========================================= */
+
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+/* =========================================
+   3 COLUMN GRID
+========================================= */
+
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+/* =========================================
+   4 COLUMN GRID
+========================================= */
+
+.grid-4 {
+  grid-template-columns: 1fr;
+}
+
+/* =========================================
+   TABLET BREAKPOINT
+========================================= */
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================
+   DESKTOP BREAKPOINT
+========================================= */
+
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
