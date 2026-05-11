@@ -1,35 +1,30 @@
-/* =======BASE======= */
+/* =========================================
+   Al Afzal Solutions — Main Stylesheet
+   Import order matters:
+   1. Base (reset → variables → type → utils)
+   2. Layout (containers → grid → header → footer)
+   3. Components (reusable UI pieces)
+   4. Pages (page-specific overrides)
+========================================= */
 
+/* --- BASE --- */
 @import url("./base/reset.css");
 @import url("./base/variables.css");
 @import url("./base/typography.css");
 @import url("./base/utilities.css");
 
-/* =========================================
-   LAYOUT
-========================================= */
-
+/* --- LAYOUT --- */
 @import url("./layout/containers.css");
 @import url("./layout/grid.css");
 @import url("./layout/header.css");
 @import url("./layout/footer.css");
 
-/* =========================================
-   COMPONENTS
-========================================= */
-
+/* --- COMPONENTS --- */
 @import url("./components/buttons.css");
 @import url("./components/cards.css");
-@import url("./components/tables.css");
 @import url("./components/badges.css");
+@import url("./components/tables.css");
 @import url("./components/forms.css");
 
-/* =========================================
-   PAGES
-========================================= */
-
+/* --- PAGES --- */
 @import url("./pages/home.css");
-@import url("./pages/category.css");
-@import url("./pages/article.css");
-@import url("./pages/about.css");
-@import url("./pages/contact.css");

@@ -3,107 +3,203 @@
 ========================================= */
 
 .site-header {
-  /* padding-block: var(--space-3); */
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background-color: rgba(254, 254, 254, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
-  background-color: var(--color-bg);
+  transition: box-shadow var(--transition-normal);
+}
+
+.site-header.scrolled {
+  box-shadow: var(--shadow-sm);
 }
 
 /* =========================================
-   HEADER LAYOUT
+   HEADER INNER LAYOUT
 ========================================= */
 
-.header-wrapper {
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  height: 4rem;
+  gap: var(--space-4);
 }
 
 /* =========================================
    LOGO
 ========================================= */
 
-.logo {
-  font-size: var(--fs-lg);
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-logo__mark {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.site-logo__text {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
   font-weight: var(--fw-bold);
   color: var(--color-text);
+  line-height: 1.2;
 }
 
-/* =========================================
-   MOBILE MENU BUTTON
-========================================= */
-
-.menu-toggle {
-  font-size: var(--fs-xl);
-  color: var(--color-text);
-}
-
-/* =========================================
-   NAVIGATION
-========================================= */
-
-.main-nav {
-  position: absolute;
-  top: 100%;
-  right: 0;
-
-  width: 220px;
-
-  padding: var(--space-4);
-
-  background-color: var(--color-bg);
-
-  border: 1px solid var(--color-border);
-
-  border-radius: var(--radius-md);
-
-  box-shadow: var(--shadow-md);
-
-  display: none;
-}
-
-/* =========================================
-   NAVIGATION LIST
-========================================= */
-
-.nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-
-.nav-list a {
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--color-text-light);
-  transition: color var(--transition-fast);
-}
-
-.nav-list a:hover {
+.site-logo__text span {
   color: var(--color-primary);
 }
 
 /* =========================================
-   DESKTOP NAVIGATION
+   MAIN NAV
 ========================================= */
 
-@media (min-width: 768px) {
-  .menu-toggle {
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.main-nav__link {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-light);
+  padding: 0.375rem var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.main-nav__link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.main-nav__link.active {
+  color: var(--color-primary);
+  font-weight: var(--fw-semibold);
+}
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+/* =========================================
+   HAMBURGER (Mobile)
+========================================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--space-2);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.hamburger:hover {
+  background-color: var(--color-surface);
+}
+
+.hamburger__line {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition:
+    transform var(--transition-normal),
+    opacity var(--transition-normal);
+}
+
+/* Open state */
+.hamburger.open .hamburger__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .hamburger__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================
+   MOBILE DRAWER
+========================================= */
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) 0 var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav__link {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-light);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.mobile-nav__link:hover,
+.mobile-nav__link.active {
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 767px) {
+  .main-nav {
     display: none;
   }
 
-  .main-nav {
-    position: static;
-    width: auto;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    display: block;
+  .hamburger {
+    display: flex;
   }
 
-  .nav-list {
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-4);
+  .header-actions .btn {
+    display: none;
   }
 }
