@@ -1,0 +1,2 @@
+// Write welcome alert code
+alert("Welcome to Al Afzal Solutions! We are glad to have you here. Explore our website for the best affiliate marketing tips, effective learning guides, and stationery product reviews. Happy browsing!");

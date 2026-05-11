@@ -1,0 +1,98 @@
+/* =========================================
+   SITE FOOTER
+========================================= */
+
+.site-footer {
+  margin-top: var(--space-8);
+
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-4);
+
+  border-top: 1px solid var(--color-border);
+
+  background-color: var(--color-surface);
+}
+
+/* =========================================
+   FOOTER LAYOUT
+========================================= */
+
+.footer-wrapper {
+  display: grid;
+  gap: var(--space-6);
+
+  margin-bottom: var(--space-6);
+}
+
+/* =========================================
+   FOOTER BRAND
+========================================= */
+
+.footer-logo {
+  display: inline-block;
+
+  margin-bottom: var(--space-2);
+
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+
+  color: var(--color-text);
+}
+
+.footer-text {
+  max-width: 320px;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-light);
+}
+
+/* =========================================
+   FOOTER NAVIGATION
+========================================= */
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-list a {
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-light);
+
+  transition: color var(--transition-fast);
+}
+
+.footer-list a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+  padding-top: var(--space-4);
+
+  border-top: 1px solid var(--color-border);
+
+  text-align: center;
+
+  font-size: var(--fs-sm);
+
+  color: var(--color-text-light);
+}
+
+/* =========================================
+   DESKTOP LAYOUT
+========================================= */
+
+@media (min-width: 768px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr auto;
+
+    align-items: start;
+  }
+}

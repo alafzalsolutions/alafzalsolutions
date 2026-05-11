@@ -1,0 +1,109 @@
+/* =========================================
+   SITE HEADER
+========================================= */
+
+.site-header {
+  /* padding-block: var(--space-3); */
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+/* =========================================
+   HEADER LAYOUT
+========================================= */
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-toggle {
+  font-size: var(--fs-xl);
+  color: var(--color-text);
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.main-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  width: 220px;
+
+  padding: var(--space-4);
+
+  background-color: var(--color-bg);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-md);
+
+  display: none;
+}
+
+/* =========================================
+   NAVIGATION LIST
+========================================= */
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.nav-list a {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-light);
+  transition: color var(--transition-fast);
+}
+
+.nav-list a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    width: auto;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-4);
+  }
+}
