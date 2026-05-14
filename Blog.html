@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
       name="description"
       content="Browse our latest articles on learning strategies, product reviews, study resources, and top picks for students and professionals."
     />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -42,14 +42,11 @@
 
           <nav class="main-nav" aria-label="Main navigation">
             <a href="/" class="main-nav__link">Home</a>
-            <a href="/Blog.html" class="main-nav__link active">Blog</a>
-            <a href="/category.html" class="main-nav__link">Categories</a>
-            <a href="/about.html" class="main-nav__link">About</a>
-            <a href="/contact.html" class="main-nav__link">Contact</a>
+            <a href="/blog.html" class="main-nav__link active">Blog</a>
           </nav>
 
           <div class="header-actions">
-            <a href="/Blog.html" class="btn btn-primary btn-sm"
+            <a href="/blog.html" class="btn btn-primary btn-sm"
               >Read Articles</a
             >
             <button
@@ -68,10 +65,7 @@
 
         <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
           <a href="/" class="mobile-nav__link">Home</a>
-          <a href="/Blog.html" class="mobile-nav__link active">Blog</a>
-          <a href="/category.html" class="mobile-nav__link">Categories</a>
-          <a href="/about.html" class="mobile-nav__link">About</a>
-          <a href="/contact.html" class="mobile-nav__link">Contact</a>
+          <a href="/blog.html" class="mobile-nav__link active">Blog</a>
         </nav>
       </div>
     </header>
@@ -86,7 +80,7 @@
           <p class="page-hero__eyebrow">All Articles</p>
           <h1 class="page-hero__title" id="blog-heading">The Blog</h1>
           <p class="page-hero__desc">
-            Practical guides, honest reviews, and curated picks — written for
+            Practical guides, honest reviews, and curated picks â€” written for
             students and professionals who want to learn smarter and buy better.
           </p>
         </div>
@@ -107,35 +101,35 @@
               aria-label="Filter articles by category"
             >
               <a
-                href="/Blog.html"
+                href="/blog.html"
                 class="filter-tab active"
                 role="tab"
                 aria-selected="true"
                 >All</a
               >
               <a
-                href="/Blog.html?c=learning"
+                href="/blog.html?c=learning"
                 class="filter-tab"
                 role="tab"
                 aria-selected="false"
                 >Learning</a
               >
               <a
-                href="/Blog.html?c=reviews"
+                href="/blog.html?c=reviews"
                 class="filter-tab"
                 role="tab"
                 aria-selected="false"
                 >Reviews</a
               >
               <a
-                href="/Blog.html?c=picks"
+                href="/blog.html?c=picks"
                 class="filter-tab"
                 role="tab"
                 aria-selected="false"
                 >Top Picks</a
               >
               <a
-                href="/Blog.html?c=resources"
+                href="/blog.html?c=resources"
                 class="filter-tab"
                 role="tab"
                 aria-selected="false"
@@ -174,11 +168,11 @@
           <div class="blog-layout">
             <!-- Articles Column -->
             <div>
-              <p class="articles-count">Showing <strong>9</strong> articles</p>
+              <p class="articles-count">Showing <strong>1</strong> article</p>
 
               <div class="article-grid">
-                <!-- Article 1 -->
-                <article class="article-card">
+                <!-- Placeholder article -->
+                <article class="article-card" data-category="learning">
                   <div
                     class="article-card__image-placeholder"
                     aria-hidden="true"
@@ -208,7 +202,7 @@
                         >May 1, 2025</time
                       >
                     </div>
-                    <a href="#" class="article-card__title">
+                    <a href="/posts/article-1.html" class="article-card__title">
                       How to Build a Study System That Actually Sticks
                     </a>
                     <p class="article-card__excerpt">
@@ -218,514 +212,10 @@
                     </p>
                     <div class="article-card__footer">
                       <span class="article-card__read-time">8 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 2 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Reviews</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-04-22"
-                        >Apr 22, 2025</time
+                      <a
+                        href="/posts/article-1.html"
+                        class="article-card__link"
                       >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      Best Notebooks for Students in 2025: Tested & Ranked
-                    </a>
-                    <p class="article-card__excerpt">
-                      We put 12 popular notebooks through real daily use. Here's
-                      which ones are worth your money — and which to skip
-                      entirely.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">5 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 3 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Learning</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-04-15"
-                        >Apr 15, 2025</time
-                      >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      The Feynman Technique: Learn Anything Faster by Teaching
-                      It
-                    </a>
-                    <p class="article-card__excerpt">
-                      Richard Feynman's learning method is deceptively simple —
-                      and it works for everything from physics to programming to
-                      literature.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">4 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 4 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Picks</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-04-08"
-                        >Apr 8, 2025</time
-                      >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      Top 5 Affordable Desk Setups for Students Working from
-                      Home
-                    </a>
-                    <p class="article-card__excerpt">
-                      A productive workspace doesn't have to be expensive. Five
-                      student-tested desk setups under a realistic budget.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">6 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 5 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Resources</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-03-30"
-                        >Mar 30, 2025</time
-                      >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      7 Free Tools Every Student Should Be Using in 2025
-                    </a>
-                    <p class="article-card__excerpt">
-                      From note-taking to time management — these free tools
-                      have been tested and recommended by students who actually
-                      use them daily.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">5 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 6 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Reviews</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-03-20"
-                        >Mar 20, 2025</time
-                      >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      Pilot G2 vs Uni-ball Signo: Which Pen Is Actually Worth
-                      It?
-                    </a>
-                    <p class="article-card__excerpt">
-                      Two of the most popular gel pens go head-to-head. We
-                      tested both over three weeks for smoothness, durability,
-                      and value.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">4 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 7 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Learning</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-03-10"
-                        >Mar 10, 2025</time
-                      >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      Active Recall vs Passive Review: What the Research Says
-                    </a>
-                    <p class="article-card__excerpt">
-                      Re-reading your notes feels productive, but science says
-                      otherwise. Here's why active recall is the single most
-                      effective study method.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">6 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 8 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Picks</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-03-01"
-                        >Mar 1, 2025</time
-                      >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      The Best Budget Backpacks for Students: Our Top
-                      Recommendations
-                    </a>
-                    <p class="article-card__excerpt">
-                      Comfort, durability, and enough compartments without
-                      breaking the bank. We narrowed it down to five backpacks
-                      worth buying.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">5 min read</span>
-                      <a href="#" class="article-card__link">
-                        Read
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Article 9 -->
-                <article class="article-card">
-                  <div
-                    class="article-card__image-placeholder"
-                    aria-hidden="true"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                  <div class="article-card__body">
-                    <div class="article-card__meta">
-                      <span class="badge badge-category">Resources</span>
-                      <time
-                        class="article-card__read-time"
-                        datetime="2025-02-18"
-                        >Feb 18, 2025</time
-                      >
-                    </div>
-                    <a href="#" class="article-card__title">
-                      How to Take Notes That You'll Actually Use Later
-                    </a>
-                    <p class="article-card__excerpt">
-                      Most notes get written and never opened again. This guide
-                      covers three systems that turn your notes into a useful
-                      knowledge base.
-                    </p>
-                    <div class="article-card__footer">
-                      <span class="article-card__read-time">7 min read</span>
-                      <a href="#" class="article-card__link">
                         Read
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -747,66 +237,13 @@
                   </div>
                 </article>
               </div>
-              <!-- /article-grid -->
 
-              <!-- Pagination -->
-              <nav class="pagination" aria-label="Article pages">
-                <a
-                  href="#"
-                  class="pagination__btn pagination__btn--prev"
-                  aria-label="Previous page"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M19 12H5" />
-                    <path d="m12 19-7-7 7-7" />
-                  </svg>
-                  Prev
-                </a>
-                <a
-                  href="#"
-                  class="pagination__btn active"
-                  aria-current="page"
-                  aria-label="Page 1"
-                  >1</a
-                >
-                <a href="#" class="pagination__btn" aria-label="Page 2">2</a>
-                <a href="#" class="pagination__btn" aria-label="Page 3">3</a>
-                <span class="pagination__dots" aria-hidden="true">…</span>
-                <a href="#" class="pagination__btn" aria-label="Page 8">8</a>
-                <a
-                  href="#"
-                  class="pagination__btn pagination__btn--next"
-                  aria-label="Next page"
-                >
-                  Next
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-              </nav>
+              <div class="blog-empty-state">
+                <p>
+                  This blog is ready for your next article. Keep this page as a
+                  placeholder and upload new posts when you're ready.
+                </p>
+              </div>
             </div>
             <!-- /articles column -->
 
@@ -816,28 +253,28 @@
               <div class="sidebar-widget">
                 <h2 class="sidebar-widget__title">Categories</h2>
                 <div class="sidebar-categories">
-                  <a href="/Blog.html" class="sidebar-category-link">
+                  <a href="/blog.html" class="sidebar-category-link">
                     All Articles
-                    <span class="sidebar-category-count">9</span>
+                    <span class="sidebar-category-count">1</span>
                   </a>
-                  <a href="/Blog.html?c=learning" class="sidebar-category-link">
+                  <a href="/blog.html?c=learning" class="sidebar-category-link">
                     Learning
-                    <span class="sidebar-category-count">3</span>
+                    <span class="sidebar-category-count">1</span>
                   </a>
-                  <a href="/Blog.html?c=reviews" class="sidebar-category-link">
+                  <a href="/blog.html?c=reviews" class="sidebar-category-link">
                     Reviews
-                    <span class="sidebar-category-count">2</span>
+                    <span class="sidebar-category-count">0</span>
                   </a>
-                  <a href="/Blog.html?c=picks" class="sidebar-category-link">
+                  <a href="/blog.html?c=picks" class="sidebar-category-link">
                     Top Picks
-                    <span class="sidebar-category-count">2</span>
+                    <span class="sidebar-category-count">0</span>
                   </a>
                   <a
-                    href="/Blog.html?c=resources"
+                    href="/blog.html?c=resources"
                     class="sidebar-category-link"
                   >
                     Resources
-                    <span class="sidebar-category-count">2</span>
+                    <span class="sidebar-category-count">0</span>
                   </a>
                 </div>
               </div>
@@ -846,30 +283,10 @@
               <div class="sidebar-widget">
                 <h2 class="sidebar-widget__title">Popular This Month</h2>
                 <div class="sidebar-posts">
-                  <a href="#" class="sidebar-post">
+                  <a href="/posts/article-1.html" class="sidebar-post">
                     <span class="sidebar-post__num">01</span>
                     <span class="sidebar-post__title"
                       >How to Build a Study System That Actually Sticks</span
-                    >
-                  </a>
-                  <a href="#" class="sidebar-post">
-                    <span class="sidebar-post__num">02</span>
-                    <span class="sidebar-post__title"
-                      >Best Notebooks for Students in 2025: Tested &
-                      Ranked</span
-                    >
-                  </a>
-                  <a href="#" class="sidebar-post">
-                    <span class="sidebar-post__num">03</span>
-                    <span class="sidebar-post__title"
-                      >Active Recall vs Passive Review: What the Research
-                      Says</span
-                    >
-                  </a>
-                  <a href="#" class="sidebar-post">
-                    <span class="sidebar-post__num">04</span>
-                    <span class="sidebar-post__title"
-                      >7 Free Tools Every Student Should Be Using in 2025</span
                     >
                   </a>
                 </div>
@@ -927,33 +344,16 @@
           <div class="footer-col">
             <h3 class="footer-col__title">Content</h3>
             <div class="footer-col__links">
-              <a href="/Blog.html" class="footer-col__link">Blog</a>
-              <a href="/category.html?c=learning" class="footer-col__link"
+              <a href="/blog.html" class="footer-col__link">Blog</a>
+              <a href="/blog.html?c=learning" class="footer-col__link"
                 >Learning Guides</a
               >
-              <a href="/category.html?c=reviews" class="footer-col__link"
+              <a href="/blog.html?c=reviews" class="footer-col__link"
                 >Product Reviews</a
               >
-              <a href="/category.html?c=picks" class="footer-col__link"
+              <a href="/blog.html?c=picks" class="footer-col__link"
                 >Top Picks</a
               >
-            </div>
-          </div>
-
-          <div class="footer-col">
-            <h3 class="footer-col__title">Company</h3>
-            <div class="footer-col__links">
-              <a href="/about.html" class="footer-col__link">About Us</a>
-              <a href="/contact.html" class="footer-col__link">Contact</a>
-            </div>
-          </div>
-
-          <div class="footer-col">
-            <h3 class="footer-col__title">Legal</h3>
-            <div class="footer-col__links">
-              <a href="#" class="footer-col__link">Privacy Policy</a>
-              <a href="#" class="footer-col__link">Terms of Use</a>
-              <a href="#" class="footer-col__link">Affiliate Disclosure</a>
             </div>
           </div>
         </div>
@@ -964,14 +364,49 @@
             reserved.
           </p>
           <div class="footer-bottom__links">
-            <a href="#" class="footer-bottom__link">Privacy</a>
-            <a href="#" class="footer-bottom__link">Terms</a>
-            <a href="#" class="footer-bottom__link">Disclosure</a>
+            <a href="/article.html" class="footer-bottom__link">Privacy</a>
+            <a href="/article.html" class="footer-bottom__link">Terms</a>
+            <a href="/article.html" class="footer-bottom__link">Disclosure</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="/assets/js/main.js"></script>
+    <script>
+      // Blog filter functionality
+      (function () {
+        const filterTabs = document.querySelectorAll(".filter-tab");
+        const articles = document.querySelectorAll(".article-card");
+        const articlesCount = document.querySelector(".articles-count strong");
+
+        filterTabs.forEach((tab) => {
+          tab.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Remove active class from all tabs
+            filterTabs.forEach((t) => t.classList.remove("active"));
+            // Add active to clicked tab
+            this.classList.add("active");
+
+            const category = this.getAttribute("href").split("?c=")[1] || "all";
+
+            let visibleCount = 0;
+            articles.forEach((article) => {
+              const articleCategory = article.getAttribute("data-category");
+              if (category === "all" || articleCategory === category) {
+                article.style.display = "block";
+                visibleCount++;
+              } else {
+                article.style.display = "none";
+              }
+            });
+
+            // Update count
+            articlesCount.textContent = visibleCount;
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

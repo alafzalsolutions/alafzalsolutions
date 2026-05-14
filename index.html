@@ -1,359 +1,160 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Al Afzal Solutions — Smarter Learning & Better Buying</title>
     <meta
       name="description"
-      content="Al Afzal Solutions is an education and affiliate platform, that shares resources, learning, and opportunities for students and professionals."
+      content="Honest product reviews, practical learning guides, and carefully curated recommendations for students and professionals."
     />
     <meta
       name="keywords"
-      content="affiliate marketing, how to learn effectively, stationery product reviews, buying, best learning guides"
+      content="affiliate marketing, learning guides, product reviews, study resources, stationery reviews"
     />
     <meta name="author" content="Al Afzal Solutions" />
-    <!-- <meta name="robots" content="noindex, nofollow" /> -->
-    <!-- Page Title -->
-    <title>Homepage | Al Afzal Solutions</title>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Al Afzal Solutions — Smarter Learning & Better Buying"
+    />
+    <meta
+      property="og:description"
+      content="Honest product reviews, practical learning guides, and carefully curated recommendations."
+    />
+    <meta property="og:type" content="website" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "wmg5mwykjo");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-W001G210B8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-W001G210B8");
+    </script>
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="/assets/css/main.css" />
-
-    <script src="/assets/js/main.js"></script>
   </head>
 
-  <!doctype html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-      <!-- SEO -->
-      <title>Al Afzal Solutions — Smarter Learning & Better Buying</title>
-      <meta
-        name="description"
-        content="Honest product reviews, practical learning guides, and carefully curated recommendations for students and professionals."
-      />
-      <meta
-        name="keywords"
-        content="affiliate marketing, learning guides, product reviews, study resources, stationery reviews"
-      />
-      <meta name="author" content="Al Afzal Solutions" />
-      <meta name="robots" content="noindex, nofollow" />
-
-      <!-- Open Graph -->
-      <meta
-        property="og:title"
-        content="Al Afzal Solutions — Smarter Learning & Better Buying"
-      />
-      <meta
-        property="og:description"
-        content="Honest product reviews, practical learning guides, and carefully curated recommendations."
-      />
-      <meta property="og:type" content="website" />
-
-      <!-- Favicon -->
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-      <!-- Google Fonts (preconnect for performance) -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap"
-        rel="stylesheet"
-      />
-
-      <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-          c[a] =
-            c[a] ||
-            function () {
-              (c[a].q = c[a].q || []).push(arguments);
-            };
-          t = l.createElement(r);
-          t.async = 1;
-          t.src = "https://www.clarity.ms/tag/" + i;
-          y = l.getElementsByTagName(r)[0];
-          y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "wmg5mwykjo");
-      </script>
-      <!-- Google tag (gtag.js) -->
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-W001G210B8"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "G-W001G210B8");
-      </script>
-
-      <!-- Main CSS -->
-      <link rel="stylesheet" href="/assets/css/main.css" />
-    </head>
-
-    <body>
-      <!-- ==========================================
-         COMPONENT: Header
-         Future Astro: <Header />
+  <body>
+    <!-- ==========================================
+       COMPONENT: Header
     =========================================== -->
-      <header class="site-header" id="site-header">
-        <div class="container">
-          <div class="header-inner">
-            <!-- Logo -->
-            <a href="/" class="site-logo" aria-label="Al Afzal Solutions Home">
-              <div class="site-logo__mark" aria-hidden="true">A</div>
-              <span class="site-logo__text"
-                >Al Afzal <span>Solutions</span></span
-              >
-            </a>
+    <header class="site-header" id="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <!-- Logo -->
+          <a href="/" class="site-logo" aria-label="Al Afzal Solutions Home">
+            <div class="site-logo__mark" aria-hidden="true">A</div>
+            <span class="site-logo__text">Al Afzal <span>Solutions</span></span>
+          </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="main-nav" aria-label="Main navigation">
-              <a href="/" class="main-nav__link active">Home</a>
-              <a href="/Blog.html" class="main-nav__link">Blog</a>
-              <a href="/category.html" class="main-nav__link">Categories</a>
-              <a href="/about.html" class="main-nav__link">About</a>
-              <a href="/contact.html" class="main-nav__link">Contact</a>
-            </nav>
-
-            <!-- Header Actions -->
-            <div class="header-actions">
-              <a href="/Blog.html" class="btn btn-primary btn-sm"
-                >Read Articles</a
-              >
-
-              <!-- Hamburger (mobile) -->
-              <button
-                class="hamburger"
-                id="hamburger"
-                aria-label="Toggle menu"
-                aria-expanded="false"
-                aria-controls="mobile-nav"
-              >
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Mobile Navigation -->
-          <nav
-            class="mobile-nav"
-            id="mobile-nav"
-            aria-label="Mobile navigation"
-          >
-            <a href="/" class="mobile-nav__link active">Home</a>
-            <a href="/Blog.html" class="mobile-nav__link">Blog</a>
-            <a href="/category.html" class="mobile-nav__link">Categories</a>
-            <a href="/about.html" class="mobile-nav__link">About</a>
-            <a href="/contact.html" class="mobile-nav__link">Contact</a>
+          <!-- Desktop Navigation -->
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="/" class="main-nav__link active">Home</a>
+            <a href="/blog.html" class="main-nav__link">Blog</a>
           </nav>
-        </div>
-      </header>
 
-      <main id="main-content">
-        <!-- ==========================================
-           SECTION: Hero
-           Future Astro: Hero.astro
-      =========================================== -->
-        <section class="hero" aria-labelledby="hero-heading">
-          <div class="container">
-            <div class="hero__inner">
-              <!-- Eyebrow label -->
-              <div class="hero__eyebrow">
-                <span class="hero__eyebrow-dot" aria-hidden="true"></span>
-                Now Live — Explore Our Guides
-              </div>
-
-              <!-- Main heading -->
-              <h1 class="hero__title" id="hero-heading">
-                Your Guide to <em>Smarter</em><br />
-                Learning & Better Buying
-              </h1>
-
-              <!-- Subheading -->
-              <p class="hero__subtitle">
-                Honest product reviews, practical study guides, and carefully
-                curated recommendations — all in one place, built for students
-                and professionals.
-              </p>
-
-              <!-- CTAs -->
-              <div class="hero__actions">
-                <a href="/Blog.html" class="btn btn-primary btn-lg">
-                  Explore Articles
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </a>
-                <a href="/about.html" class="btn btn-secondary btn-lg"
-                  >About Us</a
-                >
-              </div>
-
-              <!-- Social proof stats -->
-              <!-- <div class="hero__stats" aria-label="Site statistics">
-                <div class="hero__stat">
-                  <div class="hero__stat-number">50+</div>
-                  <div class="hero__stat-label">Articles Published</div>
-                </div>
-                <div  
-                  class="hero__stat"
-                  aria-hidden="true"
-                  style="color: var(--color-border)"
-                >
-                  |
-                </div>
-                <div class="hero__stat">
-                  <div class="hero__stat-number">10+</div>
-                  <div class="hero__stat-label">Product Reviews</div>
-                </div>
-                <div
-                  class="hero__stat"
-                  aria-hidden="true"
-                  style="color: var(--color-border)"
-                >
-                  |
-                </div>
-                <div class="hero__stat">
-                  <div class="hero__stat-number">5</div>
-                  <div class="hero__stat-label">Topic Categories</div>
-                </div>
-              </div> -->
-            </div>
-          </div>
-        </section>
-
-        <!-- ==========================================
-           SECTION: Categories
-           Future Astro: CategoryStrip.astro
-      =========================================== -->
-        <section
-          class="categories-section"
-          aria-labelledby="categories-heading"
-        >
-          <div class="container">
-            <!-- Section Header -->
-            <div class="section-header section-header--center">
-              <p class="section-eyebrow">Browse by Topic</p>
-              <h2 class="section-title" id="categories-heading">
-                What We Cover
-              </h2>
-              <p class="section-desc">
-                From learning strategies to product picks — find exactly what
-                you need.
-              </p>
-            </div>
-
-            <!-- Category Grid -->
-            <div class="grid grid-2" style="--grid-cols-desktop: 4">
-              <!-- Category: Learning Strategies -->
-              <a href="/category.html?c=learning" class="category-card">
-                <div
-                  class="category-card__icon"
-                  style="background-color: #eff6ff"
-                >
-                  📚
-                </div>
-                <div>
-                  <div class="category-card__label">Learning Strategies</div>
-                  <div class="category-card__count">Coming Soon</div>
-                </div>
-              </a>
-
-              <!-- Category: Product Reviews -->
-              <a href="/category.html?c=reviews" class="category-card">
-                <div
-                  class="category-card__icon"
-                  style="background-color: #fffbeb"
-                >
-                  ⭐
-                </div>
-                <div>
-                  <div class="category-card__label">Product Reviews</div>
-                  <div class="category-card__count">Coming Soon</div>
-                </div>
-              </a>
-
-              <!-- Category: Affiliate Picks -->
-              <a href="/category.html?c=picks" class="category-card">
-                <div
-                  class="category-card__icon"
-                  style="background-color: #f0fdf4"
-                >
-                  🎯
-                </div>
-                <div>
-                  <div class="category-card__label">Top Picks</div>
-                  <div class="category-card__count">Coming Soon</div>
-                </div>
-              </a>
-
-              <!-- Category: Study Resources -->
-              <a href="/category.html?c=resources" class="category-card">
-                <div
-                  class="category-card__icon"
-                  style="background-color: #fdf4ff"
-                >
-                  🛠️
-                </div>
-                <div>
-                  <div class="category-card__label">Study Resources</div>
-                  <div class="category-card__count">Coming Soon</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <!-- ==========================================
-           SECTION: Featured Articles
-           Future Astro: FeaturedPosts.astro
-      =========================================== -->
-        <section class="featured-section" aria-labelledby="featured-heading">
-          <div class="container">
-            <!-- Section Header -->
-            <div
-              class="section-header"
-              style="
-                display: flex;
-                align-items: flex-end;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                gap: 1rem;
-              "
+          <!-- Header Actions -->
+          <div class="header-actions">
+            <a href="/blog.html" class="btn btn-primary btn-sm"
+              >Read Articles</a
             >
-              <div>
-                <p class="section-eyebrow">Latest Content</p>
-                <h2 class="section-title" id="featured-heading">
-                  Featured Articles
-                </h2>
-              </div>
-              <a href="/Blog.html" class="btn btn-ghost">
-                View All Articles
+
+            <!-- Hamburger (mobile) -->
+            <button
+              class="hamburger"
+              id="hamburger"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+            >
+              <span class="hamburger__line"></span>
+              <span class="hamburger__line"></span>
+              <span class="hamburger__line"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+          <a href="/" class="mobile-nav__link active">Home</a>
+          <a href="/blog.html" class="mobile-nav__link">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ==========================================
+         SECTION: Hero
+      =========================================== -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero__inner">
+            <!-- Eyebrow label -->
+            <div class="hero__eyebrow">
+              <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+              Now Live — Explore Our Guides
+            </div>
+
+            <!-- Main heading -->
+            <h1 class="hero__title" id="hero-heading">
+              Your Guide to <em>Smarter</em><br />
+              Learning & Better Buying
+            </h1>
+
+            <!-- Subheading -->
+            <p class="hero__subtitle">
+              Honest product reviews, practical study guides, and carefully
+              curated recommendations — all in one place, built for students and
+              professionals.
+            </p>
+
+            <!-- CTAs -->
+            <div class="hero__actions">
+              <a href="/blog.html" class="btn btn-primary btn-lg">
+                Explore Articles
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
+                  width="16"
+                  height="16"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -368,13 +169,288 @@
               </a>
             </div>
 
-            <!-- Featured (large) article -->
-            <article class="article-card article-card--featured mb-5">
-              <div class="article-card__image-placeholder">
+            <div class="hero__stats">
+              <div class="hero__stat">
+                <p class="hero__stat-number">+120</p>
+                <p class="hero__stat-label">Helpful Guides</p>
+              </div>
+              <div class="hero__stat">
+                <p class="hero__stat-number">35</p>
+                <p class="hero__stat-label">Trusted Reviews</p>
+              </div>
+              <div class="hero__stat">
+                <p class="hero__stat-number">4.9/5</p>
+                <p class="hero__stat-label">Reader Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         SECTION: Categories
+      =========================================== -->
+      <section class="categories-section" aria-labelledby="categories-heading">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-header section-header--center">
+            <p class="section-eyebrow">Browse by Topic</p>
+            <h2 class="section-title" id="categories-heading">What We Cover</h2>
+            <p class="section-desc">
+              From learning strategies to product picks — find exactly what you
+              need.
+            </p>
+          </div>
+
+          <!-- Category Grid -->
+          <div class="grid grid-2" style="--grid-cols-desktop: 4">
+            <!-- Category: Learning Strategies -->
+            <a href="/blog.html?c=learning" class="category-card">
+              <div
+                class="category-card__icon"
+                style="background-color: #eff6ff"
+              >
+                📚
+              </div>
+              <div>
+                <div class="category-card__label">Learning Strategies</div>
+                <div class="category-card__count">3 articles</div>
+              </div>
+            </a>
+
+            <!-- Category: Product Reviews -->
+            <a href="/blog.html?c=reviews" class="category-card">
+              <div
+                class="category-card__icon"
+                style="background-color: #fffbeb"
+              >
+                ⭐
+              </div>
+              <div>
+                <div class="category-card__label">Product Reviews</div>
+                <div class="category-card__count">5 articles</div>
+              </div>
+            </a>
+
+            <!-- Category: Affiliate Picks -->
+            <a href="/blog.html?c=picks" class="category-card">
+              <div
+                class="category-card__icon"
+                style="background-color: #f0fdf4"
+              >
+                🎯
+              </div>
+              <div>
+                <div class="category-card__label">Top Picks</div>
+                <div class="category-card__count">4 articles</div>
+              </div>
+            </a>
+
+            <!-- Category: Resources -->
+            <a href="/blog.html?c=resources" class="category-card">
+              <div
+                class="category-card__icon"
+                style="background-color: #fdf4ff"
+              >
+                🛠️
+              </div>
+              <div>
+                <div class="category-card__label">Resources</div>
+                <div class="category-card__count">3 articles</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="top-pick-section" aria-labelledby="top-pick-heading">
+        <div class="container">
+          <div class="section-header section-header--center">
+            <p class="section-eyebrow">Top Pick</p>
+            <h2 class="section-title" id="top-pick-heading">
+              Best Gear for Students This Season
+            </h2>
+            <p class="section-desc">
+              Our current top affiliate recommendation for note-taking, desk
+              setup, and better focus while studying.
+            </p>
+          </div>
+
+          <div class="top-pick-card">
+            <div class="top-pick-card__inner">
+              <div class="top-pick-card__body">
+                <p class="top-pick-card__label">Best Overall</p>
+                <h3 class="top-pick-card__title">
+                  Rhodia Webnotebook A5 — reliable paper, premium feel
+                </h3>
+                <p class="top-pick-card__text">
+                  A top choice for students who want a journal that takes ink,
+                  stays flat, and feels premium without being overcomplicated.
+                </p>
+                <ul class="top-pick-card__list">
+                  <li class="top-pick-card__feature">
+                    <span class="top-pick-card__feature-icon" aria-hidden="true"
+                      >✓</span
+                    >
+                    Feather-smooth writing with fountain pen friendly pages.
+                  </li>
+                  <li class="top-pick-card__feature">
+                    <span class="top-pick-card__feature-icon" aria-hidden="true"
+                      >📘</span
+                    >
+                    Durable cover and pages that stay flat while you work.
+                  </li>
+                  <li class="top-pick-card__feature">
+                    <span class="top-pick-card__feature-icon" aria-hidden="true"
+                      >⭐</span
+                    >
+                    Ideal for note-taking, planning, and long-term review.
+                  </li>
+                </ul>
+                <a
+                  href="https://amzn.to/YOURCODE"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  class="btn btn-accent"
+                >
+                  Check Price on Amazon
+                </a>
+              </div>
+              <div class="top-pick-card__image" aria-hidden="true">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
                   height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                  <path d="M8 7h8M8 12h8M8 17h5" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         SECTION: Featured Articles
+      =========================================== -->
+      <section class="featured-section" aria-labelledby="featured-heading">
+        <div class="container">
+          <!-- Section Header -->
+          <div
+            class="section-header"
+            style="
+              display: flex;
+              align-items: flex-end;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              gap: 1rem;
+            "
+          >
+            <div>
+              <p class="section-eyebrow">Latest Content</p>
+              <h2 class="section-title" id="featured-heading">
+                Featured Articles
+              </h2>
+            </div>
+            <a href="/blog.html" class="btn btn-ghost">
+              View All Articles
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Featured (large) article -->
+          <article class="article-card article-card--featured mb-5">
+            <div class="article-card__image-placeholder">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                <circle cx="9" cy="9" r="2" />
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+              </svg>
+            </div>
+            <div class="article-card__body">
+              <div class="article-card__meta">
+                <span class="badge badge-category">Learning</span>
+                <time class="article-card__read-time" datetime="2025-05-01"
+                  >May 1, 2025</time
+                >
+              </div>
+              <a href="/posts/article-1.html" class="article-card__title">
+                How to Build a Study System That Actually Sticks: A Complete
+                Guide for Students
+              </a>
+              <p class="article-card__excerpt">
+                Most students study hard but still feel lost. The secret isn't
+                more hours — it's a reliable system. In this guide, we break
+                down the exact framework to go from scattered notes to a
+                focused, repeatable study routine that builds real knowledge
+                over time.
+              </p>
+              <div class="article-card__footer">
+                <span class="article-card__read-time">8 min read</span>
+                <a href="/posts/article-1.html" class="article-card__link">
+                  Read Article
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article grid (3 columns) -->
+          <div class="grid grid-3">
+            <!-- Article Card 1 -->
+            <article class="article-card">
+              <div class="article-card__image-placeholder">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -390,26 +466,19 @@
               </div>
               <div class="article-card__body">
                 <div class="article-card__meta">
-                  <span class="badge badge-category">Learning</span>
-                  <time class="article-card__read-time" datetime="2025-05-01"
-                    >May 1, 2025</time
-                  >
+                  <span class="badge badge-category">Reviews</span>
                 </div>
-                <a href="/Blog.html" class="article-card__title">
-                  How to Build a Study System That Actually Sticks: A Complete
-                  Guide for Students
+                <a href="/posts/article-2.html" class="article-card__title">
+                  Best Notebooks for Students in 2025: Tested & Ranked
                 </a>
                 <p class="article-card__excerpt">
-                  Most students study hard but still feel lost. The secret isn't
-                  more hours — it's a reliable system. In this guide, we break
-                  down the exact framework to go from scattered notes to a
-                  focused, repeatable study routine that builds real knowledge
-                  over time.
+                  We put 12 popular notebooks through real daily use. Here's
+                  which ones are actually worth your money — and which to skip.
                 </p>
                 <div class="article-card__footer">
-                  <span class="article-card__read-time">8 min read</span>
-                  <a href="/article-template.html" class="article-card__link">
-                    Read Article
+                  <span class="article-card__read-time">5 min read</span>
+                  <a href="/posts/article-2.html" class="article-card__link">
+                    Read
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="12"
@@ -430,353 +499,276 @@
               </div>
             </article>
 
-            <!-- Article grid (3 columns) -->
-            <div class="grid grid-3">
-              <!-- Article Card 1 -->
-              <article class="article-card">
-                <div class="article-card__image-placeholder">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                    <circle cx="9" cy="9" r="2" />
-                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                  </svg>
-                </div>
-                <div class="article-card__body">
-                  <div class="article-card__meta">
-                    <span class="badge badge-category">Reviews</span>
-                  </div>
-                  <a href="/Blog.html" class="article-card__title">
-                    Best Notebooks for Students in 2025: Tested & Ranked
-                  </a>
-                  <p class="article-card__excerpt">
-                    We put 12 popular notebooks through real daily use. Here's
-                    which ones are actually worth your money — and which to
-                    skip.
-                  </p>
-                  <div class="article-card__footer">
-                    <span class="article-card__read-time">5 min read</span>
-                    <a href="/Blog.html" class="article-card__link">
-                      Read
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Article Card 2 -->
-              <article class="article-card">
-                <div class="article-card__image-placeholder">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                    <circle cx="9" cy="9" r="2" />
-                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                  </svg>
-                </div>
-                <div class="article-card__body">
-                  <div class="article-card__meta">
-                    <span class="badge badge-category">Learning</span>
-                  </div>
-                  <a href="/Blog.html" class="article-card__title">
-                    The Feynman Technique: Learn Anything Faster by Teaching It
-                  </a>
-                  <p class="article-card__excerpt">
-                    Richard Feynman's learning method is deceptively simple —
-                    and it works for everything from physics to programming to
-                    literature.
-                  </p>
-                  <div class="article-card__footer">
-                    <span class="article-card__read-time">4 min read</span>
-                    <a href="/Blog.html" class="article-card__link">
-                      Read
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Article Card 3 -->
-              <article class="article-card">
-                <div class="article-card__image-placeholder">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                    <circle cx="9" cy="9" r="2" />
-                    <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                  </svg>
-                </div>
-                <div class="article-card__body">
-                  <div class="article-card__meta">
-                    <span class="badge badge-category">Picks</span>
-                  </div>
-                  <a href="/Blog.html" class="article-card__title">
-                    Top 5 Affordable Desk Setups for Students Working from Home
-                  </a>
-                  <p class="article-card__excerpt">
-                    A productive workspace doesn't have to be expensive. Here
-                    are five student-tested desk setups under a realistic
-                    budget.
-                  </p>
-                  <div class="article-card__footer">
-                    <span class="article-card__read-time">6 min read</span>
-                    <a href="/Blog.html" class="article-card__link">
-                      Read
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path d="M5 12h14" />
-                        <path d="m12 5 7 7-7 7" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <!-- ==========================================
-           SECTION: Why Us / Value Props
-           Future Astro: WhyUs.astro
-      =========================================== -->
-        <section class="why-section" aria-labelledby="why-heading">
-          <div class="container">
-            <div class="section-header section-header--center">
-              <p class="section-eyebrow">Why Al Afzal Solutions</p>
-              <h2 class="section-title" id="why-heading">
-                Content You Can Trust
-              </h2>
-              <p class="section-desc">
-                We research, and write with one goal: giving you genuinely
-                useful information.
-              </p>
-            </div>
-
-            <div class="grid grid-3">
-              <div class="feature-card">
-                <div class="feature-card__icon" aria-hidden="true">✅</div>
-                <h3 class="feature-card__title">Honest Reviews</h3>
-                <p class="feature-card__desc">
-                  No paid placements, no fluff. Every product we review is
-                  evaluated on real merit. We tell you what's good, what's bad,
-                  and what we'd actually buy ourselves.
-                </p>
-              </div>
-
-              <div class="feature-card">
-                <div class="feature-card__icon" aria-hidden="true">📖</div>
-                <h3 class="feature-card__title">Research-Backed Guides</h3>
-                <p class="feature-card__desc">
-                  Our learning guides are built on proven educational research —
-                  not recycled tips. We dig into the science so you get
-                  strategies that actually work.
-                </p>
-              </div>
-
-              <div class="feature-card">
-                <div class="feature-card__icon" aria-hidden="true">🎯</div>
-                <h3 class="feature-card__title">Built for Students</h3>
-                <p class="feature-card__desc">
-                  Everything here is written with students and self-learners in
-                  mind — budget-conscious, practical, and focused on real
-                  outcomes, not theory.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ==========================================
-           SECTION: Newsletter CTA
-           Future Astro: NewsletterCTA.astro
-      =========================================== -->
-        <section
-          class="newsletter-section"
-          aria-labelledby="newsletter-heading"
-        >
-          <div class="container">
-            <div class="newsletter-card">
-              <div class="newsletter-card__content">
-                <p class="newsletter-card__eyebrow">Stay in the Loop</p>
-                <h2 class="newsletter-card__title" id="newsletter-heading">
-                  Get New Guides Delivered to You
-                </h2>
-                <p class="newsletter-card__desc">
-                  Join our readers and get practical learning tips and honest
-                  product recommendations sent directly to your inbox. No spam,
-                  ever.
-                </p>
-                <form
-                  class="newsletter-form"
-                  action="#"
-                  method="POST"
-                  aria-label="Newsletter signup"
+            <!-- Article Card 2 -->
+            <article class="article-card">
+              <div class="article-card__image-placeholder">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
                 >
-                  <input
-                    type="email"
-                    class="newsletter-form__input"
-                    placeholder="Enter your email address"
-                    required
-                    aria-label="Email address"
-                  />
-                  <button type="submit" class="btn btn-accent">
-                    Subscribe
-                  </button>
-                  <p class="newsletter-form__privacy">
-                    We respect your privacy. Unsubscribe at any time.
-                  </p>
-                </form>
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                  <circle cx="9" cy="9" r="2" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                </svg>
               </div>
-            </div>
+              <div class="article-card__body">
+                <div class="article-card__meta">
+                  <span class="badge badge-category">Learning</span>
+                </div>
+                <a href="/posts/article-3.html" class="article-card__title">
+                  The Feynman Technique: Learn Anything Faster by Teaching It
+                </a>
+                <p class="article-card__excerpt">
+                  Richard Feynman's learning method is deceptively simple â€”
+                  and it works for everything from physics to programming to
+                  literature.
+                </p>
+                <div class="article-card__footer">
+                  <span class="article-card__read-time">4 min read</span>
+                  <a href="/posts/article-3.html" class="article-card__link">
+                    Read
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article Card 3 -->
+            <article class="article-card">
+              <div class="article-card__image-placeholder">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                  <circle cx="9" cy="9" r="2" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                </svg>
+              </div>
+              <div class="article-card__body">
+                <div class="article-card__meta">
+                  <span class="badge badge-category">Picks</span>
+                </div>
+                <a href="/posts/article-1.html" class="article-card__title">
+                  Top 5 Affordable Desk Setups for Students Working from Home
+                </a>
+                <p class="article-card__excerpt">
+                  A productive workspace doesn't have to be expensive. Here are
+                  five student-tested desk setups under a realistic budget.
+                </p>
+                <div class="article-card__footer">
+                  <span class="article-card__read-time">6 min read</span>
+                  <a href="/posts/article-1.html" class="article-card__link">
+                    Read
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
       <!-- ==========================================
-         COMPONENT: Footer
-         Future Astro: <Footer />
-    =========================================== -->
-      <footer class="site-footer" aria-label="Site footer">
+         SECTION: Why Us / Value Props
+      =========================================== -->
+      <section class="why-section" aria-labelledby="why-heading">
         <div class="container">
-          <div class="footer-grid">
-            <!-- Brand column -->
-            <div class="footer-brand">
-              <a
-                href="/"
-                class="footer-brand__logo"
-                aria-label="Al Afzal Solutions"
-              >
-                <div class="footer-brand__mark" aria-hidden="true">A</div>
-                <span class="footer-brand__name">Al Afzal Solutions</span>
-              </a>
-              <p class="footer-brand__desc">
-                Honest reviews, practical learning guides, and curated
-                recommendations for students and professionals.
+          <div class="section-header section-header--center">
+            <p class="section-eyebrow">Why Al Afzal Solutions</p>
+            <h2 class="section-title" id="why-heading">
+              Content You Can Trust
+            </h2>
+            <p class="section-desc">
+              We research, and write with one goal: giving you genuinely useful
+              information.
+            </p>
+          </div>
+
+          <div class="grid grid-3">
+            <div class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">✓</div>
+              <h3 class="feature-card__title">Honest Reviews</h3>
+              <p class="feature-card__desc">
+                No paid placements, no fluff. Every product we review is
+                evaluated on real merit. We tell you what's good, what's bad,
+                and what we'd actually buy ourselves.
               </p>
             </div>
 
-            <!-- Content links -->
-            <div class="footer-col">
-              <h3 class="footer-col__title">Content</h3>
-              <div class="footer-col__links">
-                <a href="/Blog.html" class="footer-col__link">Blog</a>
-                <a href="/category.html?c=learning" class="footer-col__link"
-                  >Learning Guides</a
-                >
-                <a href="/category.html?c=reviews" class="footer-col__link"
-                  >Product Reviews</a
-                >
-                <a href="/category.html?c=picks" class="footer-col__link"
-                  >Top Picks</a
-                >
-              </div>
+            <div class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">📘</div>
+              <h3 class="feature-card__title">Research-Backed Guides</h3>
+              <p class="feature-card__desc">
+                Our learning guides are built on proven educational research —
+                not recycled tips. We dig into the science so you get strategies
+                that actually work.
+              </p>
             </div>
 
-            <!-- Company links -->
-            <div class="footer-col">
-              <h3 class="footer-col__title">Company</h3>
-              <div class="footer-col__links">
-                <a href="/about.html" class="footer-col__link">About Us</a>
-                <a href="/contact.html" class="footer-col__link">Contact</a>
-              </div>
-            </div>
-
-            <!-- Legal links -->
-            <div class="footer-col">
-              <h3 class="footer-col__title">Legal</h3>
-              <div class="footer-col__links">
-                <a href="#" class="footer-col__link">Privacy Policy</a>
-                <a href="#" class="footer-col__link">Terms of Use</a>
-                <a href="#" class="footer-col__link">Affiliate Disclosure</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom bar -->
-          <div class="footer-bottom">
-            <p class="footer-bottom__copy">
-              &copy; <span id="footer-year"></span> Al Afzal Solutions. All
-              rights reserved.
-            </p>
-            <div class="footer-bottom__links">
-              <a href="#" class="footer-bottom__link">Privacy</a>
-              <a href="#" class="footer-bottom__link">Terms</a>
-              <a href="#" class="footer-bottom__link">Disclosure</a>
+            <div class="feature-card">
+              <div class="feature-card__icon" aria-hidden="true">🎯</div>
+              <h3 class="feature-card__title">Built for Students</h3>
+              <p class="feature-card__desc">
+                Everything here is written with students and self-learners in
+                mind — budget-conscious, practical, and focused on real
+                outcomes, not theory.
+              </p>
             </div>
           </div>
         </div>
-      </footer>
+      </section>
 
-      <!-- Main JS -->
-      <script src="/assets/js/main.js"></script>
-    </body>
-  </html>
+      <!-- ==========================================
+         SECTION: Newsletter CTA
+      =========================================== -->
+      <section class="newsletter-section" aria-labelledby="newsletter-heading">
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="newsletter-card__content">
+              <p class="newsletter-card__eyebrow">Stay in the Loop</p>
+              <h2 class="newsletter-card__title" id="newsletter-heading">
+                Get New Guides Delivered to You
+              </h2>
+              <p class="newsletter-card__desc">
+                Join our readers and get practical learning tips and honest
+                product recommendations sent directly to your inbox. No spam,
+                ever.
+              </p>
+              <form
+                class="newsletter-form"
+                action="#"
+                method="POST"
+                aria-label="Newsletter signup"
+              >
+                <input
+                  type="email"
+                  class="newsletter-form__input"
+                  placeholder="Enter your email address"
+                  required
+                  aria-label="Email address"
+                />
+                <button type="submit" class="btn btn-accent">Subscribe</button>
+                <p class="newsletter-form__privacy">
+                  We respect your privacy. Unsubscribe at any time.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================
+       COMPONENT: Footer
+    =========================================== -->
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand column -->
+          <div class="footer-brand">
+            <a
+              href="/"
+              class="footer-brand__logo"
+              aria-label="Al Afzal Solutions Home"
+            >
+              <div class="footer-brand__mark" aria-hidden="true">A</div>
+              <span class="footer-brand__name">Al Afzal Solutions</span>
+            </a>
+            <p class="footer-brand__desc">
+              Honest reviews, practical learning guides, and curated
+              recommendations for students and professionals.
+            </p>
+          </div>
+
+          <!-- Content links -->
+          <div class="footer-col">
+            <h3 class="footer-col__title">Content</h3>
+            <div class="footer-col__links">
+              <a href="/blog.html" class="footer-col__link">Blog</a>
+              <a href="/blog.html?c=learning" class="footer-col__link"
+                >Learning Guides</a
+              >
+              <a href="/blog.html?c=reviews" class="footer-col__link"
+                >Product Reviews</a
+              >
+              <a href="/blog.html?c=picks" class="footer-col__link"
+                >Top Picks</a
+              >
+            </div>
+          </div>
+
+          <!-- Legal links -->
+          <div class="footer-col">
+            <h3 class="footer-col__title">Legal</h3>
+            <div class="footer-col__links">
+              <a href="#" class="footer-col__link">Privacy Policy</a>
+              <a href="#" class="footer-col__link">Terms of Use</a>
+              <a href="#" class="footer-col__link">Affiliate Disclosure</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+          <p class="footer-bottom__copy">
+            &copy; <span id="footer-year"></span> Al Afzal Solutions. All rights
+            reserved.
+          </p>
+          <div class="footer-bottom__links">
+            <a href="#" class="footer-bottom__link">Privacy</a>
+            <a href="#" class="footer-bottom__link">Terms</a>
+            <a href="#" class="footer-bottom__link">Disclosure</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>

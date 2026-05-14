@@ -193,6 +193,20 @@
   margin-bottom: var(--space-4);
 }
 
+.blog-empty-state {
+  padding: var(--space-5);
+  margin-top: var(--space-5);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-light);
+}
+
+.blog-empty-state p {
+  margin: 0;
+  line-height: 1.8;
+}
+
 /* =========================================
    SIDEBAR
 ========================================= */
