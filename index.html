@@ -2,10 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage from main branch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Coming Soon - Al Afzal Solutions</title>
+
+    <meta
+      name="description"
+      content="Our new website is currently under development. We'll be launching soon with helpful articles, guides, and resources."
+    />
+
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+
+        background: #f7f7f7;
+        color: #222;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100vh;
+
+        padding: clamp(1rem, 3vw, 2rem);
+
+        text-align: center;
+
+        line-height: 1.7;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 700px;
+
+        background: lightgrey;
+
+        padding: clamp(1.5rem, 4vw, 3rem);
+
+        border-radius: 16px;
+
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+
+        margin-bottom: 1rem;
+      }
+
+      .tagline {
+        font-size: 1.25rem;
+
+        margin-bottom: 1.5rem;
+
+        font-weight: 600;
+      }
+
+      .status {
+        display: inline-block;
+
+        margin-top: 2rem;
+
+        padding: 0.8rem 1.5rem;
+
+        background: #111;
+
+        color: white;
+
+        border-radius: 999px;
+
+        font-weight: 600;
+
+        letter-spacing: 0.05em;
+      }
+    </style>
   </head>
+
   <body>
-    <p>This is the homepage from the main branch.</p>
+    <main class="container">
+      <h1>Al Afzal Solutions</h1>
+
+      <p class="tagline">Website is currently under development.</p>
+
+      <p>Building something useful for you.</p>
+
+      <p>Thank you for your patience.</p>
+
+      <div class="status">🚀 Launching Soon</div>
+    </main>
   </body>
 </html>
