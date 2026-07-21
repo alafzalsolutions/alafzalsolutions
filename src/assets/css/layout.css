@@ -1,0 +1,77 @@
+/* ==========================================================
+   LAYOUT
+   ========================================================== */
+
+/* Container */
+
+.container {
+  width: min(100% - (2 * var(--container-padding)), var(--container-width));
+  margin-inline: auto;
+}
+
+/* Sections */
+
+.section {
+  padding-block: var(--space-16);
+}
+
+/* Header */
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+
+  min-height: 4.5rem;
+}
+
+/* Main */
+
+.site-main {
+  flex: 1;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+}
+
+.site-footer__inner {
+  padding-block: var(--space-10);
+}
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ==========================================================
+   SECTION HEADER
+   ========================================================== */
+
+.section__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-4);
+
+  margin-bottom: var(--space-8);
+}
+
+.section__title {
+  margin: 0;
+}

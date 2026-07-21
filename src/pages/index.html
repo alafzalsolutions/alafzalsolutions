@@ -3,9 +3,199 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/layout.css" />
+
     <title>Homepage | Al Afzal Solutions</title>
+    <meta
+      name="description"
+      content="Authentic articles on programming, AI, technology, and productivity."
+    />
+
+    <!-- canonical link -->
+    <link rel="canonical" href="https://www.alafzalsolutions.com/" />
+
+    <!-- robots directives -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- favicon -->
+    <link rel="icon" href="/src/assets/images/favicon.ico" type="image/x" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Homepage | Al Afzal Solutions" />
+    <meta
+      property="og:description"
+      content="Authentic articles on programming, AI, technology, and productivity."
+    />
+    <meta
+      property="og:image"
+      content="https://www.alafzalsolutions.com/src/assets/images/og-image.jpg"
+    />
+    <meta property="og:url" content="https://www.alafzalsolutions.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Homepage | Al Afzal Solutions" />
+    <meta
+      name="twitter:description"
+      content="Authentic articles on programming, AI, technology, and productivity."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.alafzalsolutions.com/src/assets/images/og-image.jpg"
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Al Afzal Solutions",
+        "url": "https://www.alafzalsolutions.com/"
+      }
+    </script>
+
+    <!-- Font preloads -->
+    <link
+      rel="preload"
+      href="/src/assets/fonts/inter.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/src/assets/css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-logo" href="/"> Al Afzal Solutions </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li>
+              <a class="site-nav__link" aria-current="page" href="/"> Home </a>
+            </li>
+
+            <li>
+              <a class="site-nav__link" href="/articles.html"> Articles </a>
+            </li>
+
+            <li>
+              <a class="site-nav__link" href="#"> Categories </a>
+            </li>
+
+            <li>
+              <a class="site-nav__link" href="#"> About </a>
+            </li>
+
+            <li>
+              <a class="site-nav__link" href="#"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Trusted Guides, Practical Knowledge & Informed Recommendations
+            </h1>
+
+            <p class="hero__description">
+              Welcome to <strong>Al Afzal Solutions</strong>, where you'll find
+              well-researched buying guides, educational resources, health
+              information, and practical articles designed to help you make
+              informed decisions with confidence.
+            </p>
+
+            <div class="hero__actions">
+              <a class="button button--primary" href="/articles.html">
+                Read Articles
+              </a>
+
+              <a class="button button--secondary" href="#about"> Learn More </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="featured-article-title">
+        <div class="container">
+          <div class="section__header">
+            <h2 id="featured-article-title" class="section__title">
+              Featured Article
+            </h2>
+          </div>
+
+          <article class="article-card">
+            <!-- Replace this image with your real featured image -->
+            <img
+              class="article-card__image"
+              src="assets/images/articles/your-first-article.webp"
+              alt="Describe your featured image"
+              width="1200"
+              height="675"
+              loading="eager"
+            />
+
+            <div class="article-card__body">
+              <p class="article-card__category">Stationery</p>
+
+              <h3 class="article-card__title">
+                <a href="/article.html">
+                  The Complete Guide to Choosing the Right Stationery for
+                  School, College, and Office
+                </a>
+              </h3>
+
+              <p class="article-card__excerpt">
+                Learn how to choose the right pens, notebooks, pencils, and
+                other stationery products based on your needs, budget, and daily
+                use. This comprehensive guide helps students, professionals, and
+                everyday users make informed purchasing decisions.
+              </p>
+
+              <div class="article-card__meta">
+                <time datetime="2026-07-16"> July 16, 2026 </time>
+
+                <span>•</span>
+
+                <span>15 min read</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section__header">
+            <h2 id="about-title" class="section__title">
+              About Al Afzal Solutions
+            </h2>
+          </div>
+
+          <p>
+            Al Afzal Solutions is an independent knowledge platform dedicated to
+            publishing practical guides, educational resources, product reviews,
+            comparisons, and research-based information. We focus on publishing
+            accurate, helpful, and regularly updated content designed to solve
+            real problems and answer real questions.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Al Afzal Solutions</p>
+      </div>
+    </footer>
+  </body>
 </html>
