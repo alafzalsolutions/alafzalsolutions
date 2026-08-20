@@ -1,5 +1,0 @@
-# Replace example.com in sitemap.xml before production deployment.
-User-agent: *
-Allow: /
-
-Sitemap: https://example.com/sitemap.xml
