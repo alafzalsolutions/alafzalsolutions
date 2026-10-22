@@ -72,3 +72,14 @@ img { max-width: 100%; height: auto; }
   color: var(--color-clay);
   margin: 0;
 }
+
+.tag {
+  display: inline-block;
+  background: var(--color-sage-tint);
+  color: var(--color-forest-deep);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+}

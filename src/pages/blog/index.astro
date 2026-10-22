@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/baseLayout.astro';
+import { getPosts, formatDate } from '../../lib/posts';
+const posts = await getPosts();
+---
+<BaseLayout title="Articles" description="Guides on learning, productivity and everyday wellbeing.">
+  <section class="container list">
+    <p class="hand">the guides</p>
+    <h1>Articles</h1>
+    {posts.length === 0 ? (
+      <p>New guides are on the way.</p>
+    ) : (
+      <div class="grid">
+        {posts.map((post) => (
+          <a class="card" href={`/blog/${post.id}/`}>
+            <span class="tag">{post.data.category}</span>
+            <h2>{post.data.title}</h2>
+            <p>{post.data.description}</p>
+            <span class="date">{formatDate(post.data.updatedDate ?? post.data.pubDate)}</span>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .list { padding-block: var(--space-12) var(--space-16); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+  .card {
+    display: block;
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-6);
+    text-decoration: none;
+    color: var(--color-ink);
+  }
+  .card:hover { border-color: var(--color-sage); }
+  .card h2 { font-size: 1.25rem; margin: var(--space-3) 0 var(--space-2); }
+  .card p { color: var(--color-stone); font-size: 0.9375rem; }
+  .date { font-size: 0.8125rem; color: var(--color-stone); }
+</style>
