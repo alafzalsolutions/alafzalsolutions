@@ -1,5 +1,7 @@
 export const SITE = {
   name: 'Your Site Name',
   description:
-    'uides and free tools for studying, productivity and everyday wellbeing.',
+    'Guides and free tools for studying, productivity and everyday wellbeing.',
+    locales: 'en-US',
+    defaultImage: ''
 };
