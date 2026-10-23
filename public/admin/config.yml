@@ -1,0 +1,95 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: alafzalsolutions/alafzalsolutions
+  branch: main
+
+media_folder: public/images/blog
+public_folder: /images/blog
+
+collections:
+  - name: blog
+    label: Articles
+    label_singular: Article
+    folder: src/content/blog
+    extension: md
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{category}})"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "Max 65 characters. Put the main keyword near the start."
+        pattern: ['^.{1,65}$', "Keep the title to 65 characters or fewer"]
+      - label: SEO title (optional)
+        name: seoTitle
+        widget: string
+        required: false
+        hint: "Only if the page title in Google should differ from the headline. Max 65."
+        pattern: ['^.{1,65}$', "Keep to 65 characters or fewer"]
+      - label: Meta description
+        name: description
+        widget: text
+        hint: "50 to 160 characters. Say what the reader gets, in plain words."
+        pattern: ['^[\s\S]{50,160}$', "Must be between 50 and 160 characters"]
+      - label: Publish date
+        name: pubDate
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+      - label: Updated date (optional)
+        name: updatedDate
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+        required: false
+      - label: Category
+        name: category
+        widget: select
+        options: [learning, productivity, health, reading, stationery]
+      - label: Author
+        name: author
+        widget: string
+        default: "Your Name"
+      - label: Cover image (optional, 1200 x 630 px, WebP or JPG)
+        name: image
+        widget: image
+        required: false
+      - label: Cover image alt text
+        name: imageAlt
+        widget: string
+        required: false
+        hint: "Describe the image. Required if you add a cover image."
+      - label: Related articles
+        name: related
+        widget: list
+        required: false
+        field:
+          label: Article
+          name: article
+          widget: relation
+          collection: blog
+          search_fields: [title]
+          value_field: "{{slug}}"
+          display_fields: [title]
+      - label: Sources
+        name: sources
+        widget: list
+        required: false
+        field: { label: Source, name: source, widget: string }
+      - label: Hide from search engines (noindex)
+        name: noindex
+        widget: boolean
+        default: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: true
+        hint: "Keep on until the article is ready. Drafts never appear on the live site."
+      - label: Body
+        name: body
+        widget: markdown

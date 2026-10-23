@@ -4,6 +4,7 @@ export const GET: APIRoute = ({ site }) => {
   const sitemapUrl = new URL('sitemap-index.xml', site);
   const body = `User-agent: *
 Allow: /
+Disallow: /admin/
 
 Sitemap: ${sitemapUrl.href}
 `;

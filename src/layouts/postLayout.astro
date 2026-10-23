@@ -1,14 +1,31 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './baseLayout.astro';
-import { formatDate } from '../lib/posts';
+import { getPosts, formatDate } from '../lib/posts';
 
 interface Props { post: CollectionEntry<'blog'> }
 const { post } = Astro.props;
-const { title, description, pubDate, updatedDate, category, author, sources } = post.data;
+const {
+  title, seoTitle, description, pubDate, updatedDate, category, author,
+  image, imageAlt, related: relatedIds, sources, noindex,
+} = post.data;
 const shown = updatedDate ?? pubDate;
+
+const all = await getPosts();
+const related = relatedIds
+  .map((id) => all.find((p) => p.id === id))
+  .filter(Boolean) as CollectionEntry<'blog'>[];
 ---
-<BaseLayout title={title} description={description} type="article" publishedTime={pubDate} modifiedTime={updatedDate} author={author}>
+<BaseLayout
+  title={seoTitle ?? title}
+  description={description}
+  type="article"
+  publishedTime={pubDate}
+  modifiedTime={updatedDate}
+  author={author}
+  image={image}
+  noindex={noindex}
+>
   <article class="post container">
     <div class="inner">
       <nav class="crumb" aria-label="Breadcrumb">
@@ -20,11 +37,27 @@ const shown = updatedDate ?? pubDate;
         By {author} · {updatedDate ? 'Updated' : 'Published'}
         <time datetime={shown.toISOString()}>{formatDate(shown)}</time>
       </p>
+      {image && (
+        <img class="cover" src={image} alt={imageAlt} width="1200" height="630" />
+      )}
       <div class="prose"><slot /></div>
       {sources.length > 0 && (
         <section class="sources">
           <h2>Sources</h2>
           <ul>{sources.map((s) => <li>{s}</li>)}</ul>
+        </section>
+      )}
+      {related.length > 0 && (
+        <section class="related">
+          <h2>Keep reading</h2>
+          <div class="rel-grid">
+            {related.map((r) => (
+              <a class="rel-card" href={`/blog/${r.id}/`}>
+                <span class="tag">{r.data.category}</span>
+                <h3>{r.data.title}</h3>
+              </a>
+            ))}
+          </div>
         </section>
       )}
     </div>
@@ -42,6 +75,14 @@ const shown = updatedDate ?? pubDate;
     font-size: 0.9rem;
     padding-bottom: var(--space-6);
     border-bottom: 1px solid var(--color-line);
+    margin-bottom: var(--space-8);
+  }
+  .cover {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    border-radius: var(--radius-md);
     margin-bottom: var(--space-8);
   }
   .prose { font-size: 1.125rem; line-height: 1.7; }
@@ -65,4 +106,17 @@ const shown = updatedDate ?? pubDate;
     color: var(--color-stone);
   }
   .sources h2 { font-size: 1.25rem; }
+  .related { margin-top: var(--space-12); }
+  .related h2 { font-size: 1.5rem; }
+  .rel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: var(--space-4); }
+  .rel-card {
+    display: block;
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-4) var(--space-6);
+    text-decoration: none;
+  }
+  .rel-card h3 { font-size: 1.0625rem; margin: var(--space-2) 0 0; }
 </style>
