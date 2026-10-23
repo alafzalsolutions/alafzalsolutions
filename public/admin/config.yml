@@ -4,7 +4,6 @@ backend:
   name: github
   repo: alafzalsolutions/alafzalsolutions
   branch: main
-
 media_folder: public/images/blog
 public_folder: /images/blog
 
@@ -23,7 +22,7 @@ collections:
         widget: string
         hint: "Max 65 characters. Put the main keyword near the start."
         pattern: ['^.{1,65}$', "Keep the title to 65 characters or fewer"]
-      - label: SEO title (optional)
+      - label: SEO title
         name: seoTitle
         widget: string
         required: false
@@ -40,7 +39,7 @@ collections:
         date_format: "YYYY-MM-DD"
         time_format: false
         format: "YYYY-MM-DD"
-      - label: Updated date (optional)
+      - label: Updated date
         name: updatedDate
         widget: datetime
         date_format: "YYYY-MM-DD"
@@ -55,7 +54,7 @@ collections:
         name: author
         widget: string
         default: "Your Name"
-      - label: Cover image (optional, 1200 x 630 px, WebP or JPG)
+      - label: Cover image (1200 x 630 px, WebP or JPG)
         name: image
         widget: image
         required: false
@@ -76,7 +75,7 @@ collections:
           search_fields: [title]
           value_field: "{{slug}}"
           display_fields: [title]
-      - label: Sources
+      - label: Sources 
         name: sources
         widget: list
         required: false
