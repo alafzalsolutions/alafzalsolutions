@@ -7,7 +7,7 @@ updatedDate: ""
 category: learning
 author: Umair Ahmed
 imageAlt: A girl taking notes
-noindex: false
+noindex: true
 draft: false
 ---
 # Note taking - A comprehesive guide
