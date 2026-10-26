@@ -83,3 +83,21 @@ img { max-width: 100%; height: auto; }
   border-radius: 999px;
   text-transform: capitalize;
 }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--space-6);
+  border-radius: 8px;
+  font: 600 1rem var(--font-body);
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+}
+.btn-primary { background: var(--color-clay); color: var(--color-white); }
+.btn-primary:hover { background: var(--color-clay-deep); color: var(--color-white); }
+.btn-secondary { background: var(--color-white); color: var(--color-forest); border-color: var(--color-forest); }
+.btn-secondary:hover { background: var(--color-sage-tint); color: var(--color-forest); }
+.btn-row { display: flex; gap: var(--space-3); flex-wrap: wrap; }

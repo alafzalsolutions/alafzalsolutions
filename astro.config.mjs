@@ -9,6 +9,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://alafzalsolutions.com', trailingSlash: 'always',
   integrations: [mdx(), sitemap({
-    filter: (page) => !page.includes('/admin/'),
+    filter: (page) => !page.includes('/admin/') && !page.includes('/404/')
   })],
 });

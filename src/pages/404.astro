@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page not found" description="This page could not be found." noindex>
+  <section class="container nf">
+    <div class="inner">
+      <p class="hand">oops</p>
+      <h1>We couldn't find that page</h1>
+      <p class="lead">The link may be old or mistyped. Try one of these instead:</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="/">Go to the homepage</a>
+        <a class="btn btn-secondary" href="/blog/">Browse articles</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .nf { padding-block: var(--space-24) var(--space-16); }
+  .inner { max-width: var(--width-read); }
+  .lead { font-size: 1.25rem; color: var(--color-stone); }
+</style>
