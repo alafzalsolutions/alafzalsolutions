@@ -3,5 +3,5 @@ export const SITE = {
   description:
     'Guides and free tools for studying, productivity and everyday wellbeing.',
     locales: 'en-US',
-    defaultImage: ''
+    defaultImage: '/og-default.png',
 };
