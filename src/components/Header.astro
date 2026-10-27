@@ -1,11 +1,9 @@
 ---
-import Logo from './logo.astro';
+import Logo from './Logo.astro';
 interface Props { minimal?: boolean }
 const { minimal = false } = Astro.props;
 const links = [
   { href: '/blog/', label: 'Articles' },
-  { href: '/tools/', label: 'Tools' },
-  { href: '/about/', label: 'About' },
 ];
 ---
 <header class="site-header">
