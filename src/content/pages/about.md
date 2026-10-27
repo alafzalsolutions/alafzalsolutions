@@ -3,10 +3,12 @@ title: "About"
 description: "Who is behind this site, why it exists, and how its guides and free tools are made."
 kicker: "about"
 updatedDate: 2026-10-26
-draft: true
+draft: false
 ---
 
-## Hi, I'm [Your name]
+## Hi, I'm Umair Ahmed
+
+Student of computer science.
 
 [Two or three honest sentences: what you struggled with, and why you started this site.]
 
@@ -27,4 +29,4 @@ draft: true
 
 ## Get in touch
 
-Write to [contact email].
+Write to info@example.com
