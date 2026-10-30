@@ -3,7 +3,7 @@ title: "Health disclaimer"
 description: "The information on this site is general and educational. It is not medical advice and does not replace a qualified professional."
 kicker: "please read"
 updatedDate: 2026-10-26
-draft: true
+draft: false
 ---
 
 ## General information only
@@ -24,4 +24,4 @@ People differ, and results vary. Nothing here promises a particular outcome. We 
 
 ## Questions
 
-Write to [contact email].
+Write to info@example.com.

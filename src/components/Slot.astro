@@ -1,0 +1,33 @@
+---
+import { SLOTS } from '../config';
+
+interface Props { kind: 'email' | 'ad' }
+const { kind } = Astro.props;
+const enabled = kind === 'email' ? SLOTS.email : SLOTS.ads;
+const empty = !Astro.slots.has('default');
+const showHint = import.meta.env.DEV && empty;
+---
+{enabled && (
+  <div class={`slot slot-${kind}`} data-slot={kind}>
+    <slot />
+    {showHint && <p class="hint">Reserved space: {kind}</p>}
+  </div>
+)}
+
+<style>
+  .slot { margin: var(--space-8) 0; }
+  .slot-email { min-height: 14rem; }
+  .slot-ad { min-height: 15.5rem; }
+  .hint {
+    margin: 0;
+    height: 100%;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--color-sage);
+    border-radius: var(--radius-md);
+    color: var(--color-stone);
+    font-size: 0.875rem;
+  }
+</style>

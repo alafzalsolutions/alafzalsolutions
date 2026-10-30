@@ -4,14 +4,22 @@ interface Props { minimal?: boolean }
 const { minimal = false } = Astro.props;
 const links = [
   { href: '/blog/', label: 'Articles' },
+  { href: '/tools/', label: 'Tools' },
+  { href: '/about/', label: 'About' },
 ];
+const path = Astro.url.pathname;
+const isActive = (href: string) => path === href || path.startsWith(href);
 ---
 <header class="site-header">
   <div class="container inner">
     <Logo />
     {!minimal && (
       <nav aria-label="Main">
-        {links.map((l) => <a href={l.href}>{l.label}</a>)}
+        {links.map((l) => (
+          <a href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>
+            {l.label}
+          </a>
+        ))}
       </nav>
     )}
   </div>
@@ -19,8 +27,31 @@ const links = [
 
 <style>
   .site-header { border-bottom: 1px solid var(--color-line); }
-  .inner { display: flex; align-items: center; justify-content: space-between; height: 4.5rem; }
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    min-height: 4.5rem;
+  }
   nav { display: flex; gap: var(--space-6); }
-  nav a { color: var(--color-ink); text-decoration: none; font-weight: 500; }
+  nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--color-ink);
+    text-decoration: none;
+    font-weight: 500;
+  }
   nav a:hover { color: var(--color-clay-deep); }
+  nav a[aria-current='page'] {
+    color: var(--color-forest);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.4rem;
+  }
+  @media (max-width: 640px) {
+    nav { gap: var(--space-4); font-size: 0.9375rem; }
+  }
 </style>

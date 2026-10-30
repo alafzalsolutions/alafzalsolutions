@@ -3,9 +3,9 @@ title: "Editorial policy"
 description: "How articles on this site are researched, written, checked and corrected, so you can decide how far to trust them."
 kicker: "how we work"
 updatedDate: 2026-10-26
-draft: true
+draft: false
 ---
-
+    
 ## Our standards
 
 Articles aim to be clear, accurate and useful. We write in plain language, say what we do not know, and do not make promises about results.
@@ -30,4 +30,4 @@ If you find a mistake, write to [contact email]. We correct errors quickly and n
 
 ## Contact
 
-Questions about this policy? Write to [contact email].
+Questions about this policy? Write to info@exampl.com.

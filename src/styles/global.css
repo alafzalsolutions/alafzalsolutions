@@ -101,3 +101,30 @@ img { max-width: 100%; height: auto; }
 .btn-secondary { background: var(--color-white); color: var(--color-forest); border-color: var(--color-forest); }
 .btn-secondary:hover { background: var(--color-sage-tint); color: var(--color-forest); }
 .btn-row { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+
+/* Callouts: :::tip, :::warning and :::definition in articles and tools */
+.callout {
+  margin: var(--space-6) 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-sage-tint);
+  border-left: 5px solid var(--color-forest);
+  border-radius: var(--radius-md);
+  color: var(--color-ink);
+}
+.callout p { margin: 0; }
+.callout p + p { margin-top: var(--space-2); }
+.callout .callout-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-forest);
+  margin-bottom: var(--space-1);
+}
+.callout-definition { border-left-color: var(--color-clay); }
+.callout-definition .callout-label { color: var(--color-clay-deep); }
+.callout-warning {
+  background: var(--color-white);
+  border: 2px solid var(--color-sun);
+  border-left-width: 5px;
+}
+.callout-warning .callout-label { color: var(--color-ink); }

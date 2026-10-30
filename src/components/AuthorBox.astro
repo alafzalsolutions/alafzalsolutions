@@ -1,0 +1,41 @@
+---
+import { AUTHOR } from '../config';
+
+interface Props { name: string }
+const { name } = Astro.props;
+---
+<aside class="author" aria-label="About the author">
+  <p class="hand">about the author</p>
+  <p class="name">{name}</p>
+  <p class="bio">{AUTHOR.bio}</p>
+  <p class="links">
+    <a href="/about/">About this site</a>
+    <a href="/editorial-policy/">How we write our guides</a>
+  </p>
+</aside>
+
+<style>
+  .author {
+    margin-top: var(--space-12);
+    padding: var(--space-6);
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+  }
+  .hand { margin: 0; }
+  .name {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: var(--space-1) 0 var(--space-2);
+  }
+  .bio { color: var(--color-stone); font-size: 0.9375rem; margin: 0 0 var(--space-3); }
+  .links { display: flex; flex-wrap: wrap; gap: var(--space-4); margin: 0; font-size: 0.9375rem; }
+  .links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    font-weight: 500;
+  }
+</style>

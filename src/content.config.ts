@@ -54,4 +54,24 @@ const pages = defineCollection({
   }),
 });
 
-export const collections = { blog, pages };
+// Free tools: each tool is one file in src/content/tools/
+const tools = defineCollection({
+  loader: glob({ base: './src/content/tools', pattern: '**/*.{md,mdx}' }),
+  schema: z.object({
+    title: z.string().max(65),
+    seoTitle: z.preprocess(blankToUndefined, z.string().max(65).optional()),
+    description: z.string().min(50).max(160),
+    // keep these in sync with the blog categories above
+    category: z.enum(['learning', 'productivity', 'health', 'reading', 'stationery']),
+    // light = plain JavaScript, heavy = a framework such as React
+    kind: z.enum(['light', 'heavy']).default('light'),
+    updatedDate: z.preprocess(toDate, z.date().optional()),
+    faq: z.preprocess(
+      blankToEmptyList,
+      z.array(z.object({ question: z.string(), answer: z.string() }))
+    ),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { blog, pages, tools };

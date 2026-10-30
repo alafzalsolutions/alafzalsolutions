@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTools } from '../../lib/tools';
+import { CATEGORIES } from '../../config';
+const tools = await getTools();
+---
+<BaseLayout title="Free tools" description="Simple, free tools for studying, planning and everyday productivity.">
+  <section class="container list">
+    <p class="hand">free tools</p>
+    <h1>Tools</h1>
+    {tools.length === 0 ? (
+      <p>New tools are on the way.</p>
+    ) : (
+      <div class="grid">
+        {tools.map((tool) => (
+          <a class="card" href={`/tools/${tool.id}/`}>
+            <span class="tag">{CATEGORIES[tool.data.category].label}</span>
+            <h2>{tool.data.title}</h2>
+            <p>{tool.data.description}</p>
+            <span class="open">Open tool</span>
+          </a>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .list { padding-block: var(--space-12) var(--space-16); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+  .card {
+    display: block;
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-6);
+    text-decoration: none;
+    color: var(--color-ink);
+  }
+  .card:hover { border-color: var(--color-sage); }
+  .card h2 { font-size: 1.25rem; margin: var(--space-3) 0 var(--space-2); }
+  .card p { color: var(--color-stone); font-size: 0.9375rem; }
+  .open { font-weight: 600; color: var(--color-clay-deep); }
+</style>

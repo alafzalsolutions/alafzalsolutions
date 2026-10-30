@@ -2,9 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { getPosts } from '../lib/posts';
+import { getTools } from '../lib/tools';
+import { CATEGORIES } from '../config';
 
-const posts = (await getPosts()).slice(0, 3);
+const allPosts = await getPosts();
+const posts = allPosts.slice(0, 3);
 const featured = posts[0];
+const topics = [...new Set(allPosts.map((p) => p.data.category))];
+const tools = (await getTools()).slice(0, 3);
 ---
 <BaseLayout>
   <section class="hero container">
@@ -51,6 +56,52 @@ const featured = posts[0];
       </div>
     </section>
   )}
+
+  {topics.length > 0 && (
+    <section class="section container">
+      <div class="head">
+        <h2>Browse by topic</h2>
+      </div>
+      <nav class="chips" aria-label="Topics">
+        {topics.map((id) => (
+          <a href={`/blog/category/${id}/`}>{CATEGORIES[id].label}</a>
+        ))}
+      </nav>
+    </section>
+  )}
+
+  {tools.length > 0 && (
+    <section class="section container">
+      <div class="head">
+        <h2>Free tools</h2>
+        <a href="/tools/">All tools</a>
+      </div>
+      <div class="grid">
+        {tools.map((tool) => (
+          <a class="tool-card" href={`/tools/${tool.id}/`}>
+            <span class="tag">{CATEGORIES[tool.data.category].label}</span>
+            <h3>{tool.data.title}</h3>
+            <p>{tool.data.description}</p>
+            <span class="open">Open tool</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="section container">
+    <div class="trust">
+      <h2>How we write</h2>
+      <p>
+        Every guide lists its sources and shows when it was last updated.
+        Health topics are general information only, never medical advice.
+      </p>
+      <p class="trust-links">
+        <a href="/editorial-policy/">Read our editorial policy</a>
+        <a href="/about/">About this site</a>
+      </p>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
@@ -97,6 +148,43 @@ const featured = posts[0];
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
     gap: var(--space-6);
   }
+  .chips { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .chips a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 var(--space-4);
+    background: var(--color-sage-tint);
+    color: var(--color-forest);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .chips a:hover { background: var(--color-sage); color: var(--color-ink); }
+  .tool-card {
+    display: block;
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    padding: var(--space-6);
+    text-decoration: none;
+    color: var(--color-ink);
+  }
+  .tool-card:hover { border-color: var(--color-sage); }
+  .tool-card h3 { font-size: 1.25rem; margin: var(--space-3) 0 var(--space-2); }
+  .tool-card p { color: var(--color-stone); font-size: 0.9375rem; margin: 0 0 var(--space-3); }
+  .open { font-weight: 600; color: var(--color-clay-deep); }
+  .trust {
+    background: var(--color-sage-tint);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+  }
+  .trust h2 { margin-top: 0; }
+  .trust p { max-width: var(--width-read); }
+  .trust-links { display: flex; flex-wrap: wrap; gap: var(--space-6); margin-bottom: 0; }
+  .trust-links a { display: inline-flex; align-items: center; min-height: 2.75rem; font-weight: 500; }
   @media (max-width: 760px) {
     .hero { grid-template-columns: 1fr; padding-block: var(--space-12) var(--space-8); }
   }

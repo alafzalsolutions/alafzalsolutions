@@ -1,12 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPosts, formatDate } from '../../lib/posts';
+import { CATEGORIES } from '../../config';
 const posts = await getPosts();
+const usedCategories = [...new Set(posts.map((p) => p.data.category))];
 ---
 <BaseLayout title="Articles" description="Guides on learning, productivity and everyday wellbeing.">
   <section class="container list">
     <p class="hand">the guides</p>
     <h1>Articles</h1>
+    {usedCategories.length > 0 && (
+      <nav class="chips" aria-label="Browse by category">
+        {usedCategories.map((id) => (
+          <a href={`/blog/category/${id}/`}>{CATEGORIES[id].label}</a>
+        ))}
+      </nav>
+    )}
     {posts.length === 0 ? (
       <p>New guides are on the way.</p>
     ) : (
@@ -26,6 +35,24 @@ const posts = await getPosts();
 
 <style>
   .list { padding-block: var(--space-12) var(--space-16); }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+  .chips a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 var(--space-4);
+    background: var(--color-sage-tint);
+    color: var(--color-forest);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .chips a:hover { background: var(--color-sage); color: var(--color-ink); }
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));

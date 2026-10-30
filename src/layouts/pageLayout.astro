@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../lib/posts';
+
+interface Props { page: CollectionEntry<'pages'> }
+const { page } = Astro.props;
+const { title, description, kicker, updatedDate, noindex } = page.data;
+---
+<BaseLayout title={title} description={description} noindex={noindex}>
+  <article class="page container">
+    <div class="inner">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / {title}
+      </nav>
+      {kicker && <p class="hand">{kicker}</p>}
+      <h1>{title}</h1>
+      {updatedDate && (
+        <span class="upd">Last updated {formatDate(updatedDate)}</span>
+      )}
+      <div class="prose"><slot /></div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .page { padding-block: var(--space-12) var(--space-16); }
+  .inner { max-width: var(--width-read); margin-inline: auto; }
+  .crumb { font-size: 0.875rem; color: var(--color-stone); margin-bottom: var(--space-4); }
+  .crumb a { color: var(--color-stone); }
+  h1 { margin: var(--space-2) 0 var(--space-4); }
+  .upd {
+    display: inline-block;
+    background: var(--color-sage-tint);
+    color: var(--color-forest-deep);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+  }
+  .prose { font-size: 1.125rem; line-height: 1.7; margin-top: var(--space-6); }
+  .prose :global(h2) { margin-top: var(--space-12); font-size: 1.75rem; }
+  .prose :global(h3) { margin-top: var(--space-8); }
+  .prose :global(ul), .prose :global(ol) { padding-left: var(--space-6); }
+  .prose :global(li) { margin-bottom: var(--space-2); }
+  .prose :global(blockquote) {
+    margin: var(--space-6) 0;
+    padding: var(--space-4) var(--space-6);
+    background: var(--color-sage-tint);
+    border-left: 5px solid var(--color-forest);
+    border-radius: var(--radius-sm);
+  }
+  .prose :global(blockquote p:last-child) { margin: 0; }
+</style>

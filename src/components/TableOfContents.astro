@@ -1,0 +1,44 @@
+---
+interface Heading { depth: number; slug: string; text: string }
+interface Props { headings: Heading[] }
+
+const { headings } = Astro.props;
+const items = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const sections = items.filter((h) => h.depth === 2).length;
+---
+{sections >= 3 && (
+  <nav class="toc" aria-label="In this guide">
+    <p class="toc-title">In this guide</p>
+    <ul>
+      {items.map((h) => (
+        <li class={h.depth === 3 ? 'sub' : undefined}>
+          <a href={`#${h.slug}`}>{h.text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc {
+    background: var(--color-sage-tint);
+    border-radius: var(--radius-md);
+    padding: var(--space-4) var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+  .toc-title {
+    font-weight: 600;
+    color: var(--color-forest);
+    margin: 0 0 var(--space-2);
+  }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin: 0; }
+  li.sub { padding-left: var(--space-6); font-size: 0.9375rem; }
+  a {
+    display: inline-block;
+    padding: var(--space-1) 0;
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+  a:hover { color: var(--color-clay-deep); text-decoration: underline; }
+</style>

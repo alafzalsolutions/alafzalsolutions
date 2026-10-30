@@ -1,0 +1,101 @@
+---
+interface Props {
+  heading?: string;
+  text?: string;
+}
+const {
+  heading = 'Get new guides by email',
+  text = 'A short note when a new guide or tool is ready. No spam, unsubscribe any time.',
+} = Astro.props;
+---
+<section class="signup" aria-labelledby="signup-heading">
+  <h2 id="signup-heading">{heading}</h2>
+  <p class="text">{text}</p>
+  <form class="form" method="post" action="/.netlify/functions/subscribe" novalidate>
+    <label for="signup-email">Email address</label>
+    <div class="row">
+      <input
+        id="signup-email"
+        name="email"
+        type="email"
+        required
+        autocomplete="email"
+        placeholder="you@example.com"
+      />
+      <button class="btn btn-primary" type="submit">Send me the guides</button>
+    </div>
+    <!-- Spam trap: people never see or fill this field, bots often do -->
+    <div class="trap" aria-hidden="true">
+      <label for="signup-website">Leave this empty</label>
+      <input id="signup-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+    <p class="status" role="status" aria-live="polite"></p>
+    <p class="fine">
+      By joining you agree to our <a href="/privacy/">privacy policy</a>.
+    </p>
+  </form>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('form.form').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('.status')!;
+    const button = form.querySelector<HTMLButtonElement>('button')!;
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = '';
+      const data = new FormData(form);
+      const email = String(data.get('email') ?? '').trim();
+      if (!email || !email.includes('@')) {
+        status.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      button.disabled = true;
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ email, website: String(data.get('website') ?? '') }),
+        });
+        const result = await response.json();
+        status.textContent = result.message ?? 'Something went wrong. Please try again.';
+        if (result.ok) form.reset();
+      } catch {
+        status.textContent = 'Something went wrong. Please try again in a moment.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  });
+</script>
+
+<style>
+  .signup {
+    background: var(--color-sage-tint);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+  }
+  h2 { margin-top: 0; font-size: 1.5rem; }
+  .text { color: var(--color-stone); max-width: var(--width-read); }
+  label { display: block; font-weight: 500; margin-bottom: var(--space-2); }
+  .row { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  input[type='email'] {
+    flex: 1 1 16rem;
+    min-height: 2.75rem;
+    padding: 0 var(--space-4);
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: var(--color-white);
+    color: var(--color-ink);
+    font: inherit;
+  }
+  .trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .status { min-height: 1.5rem; margin: var(--space-3) 0 0; font-weight: 500; color: var(--color-forest); }
+  .fine { font-size: 0.875rem; color: var(--color-stone); margin: var(--space-2) 0 0; }
+</style>

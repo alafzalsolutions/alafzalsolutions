@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="You are subscribed"
+  description="Thank you for joining. Your email address is confirmed."
+  noindex={true}
+>
+  <section class="container thanks">
+    <p class="hand">welcome</p>
+    <h1>You are subscribed</h1>
+    <p>Thank you for confirming your email address. You will hear from us when a new guide or tool is ready.</p>
+    <p><a class="btn btn-primary" href="/blog/">Read the guides</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .thanks { padding-block: var(--space-16); max-width: var(--width-read); }
+</style>

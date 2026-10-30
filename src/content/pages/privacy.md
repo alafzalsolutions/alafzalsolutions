@@ -1,9 +1,11 @@
 ---
-title: "Privacy policy"
-description: "What information this site collects, why it is collected, and the choices you have. Written in plain language."
-kicker: "your data"
-updatedDate: 2026-10-26
-draft: true
+title: Privacy policy
+kicker: your data
+description: What information this site collects, why it is collected, and the
+  choices you have. Written in plain language.
+updatedDate: 2026-10-29
+noindex: true
+draft: false
 ---
 
 > **Starter text.** Check every line against what your site really does, and against the privacy rules that apply in your country, before you publish. Delete this note when you are done.
@@ -26,7 +28,7 @@ draft: true
 
 ## Your choices
 
-You can ask us what we hold about you, ask us to correct or delete it, or stop receiving emails at any time. Write to [contact email].
+You can ask us what we hold about you, ask us to correct or delete it, or stop receiving emails at any time. Write to info@example.com.
 
 ## Changes
 

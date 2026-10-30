@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { getPosts } from '../../../lib/posts';
+import { CATEGORIES } from '../../../config';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  const used = [...new Set(posts.map((p) => p.data.category))];
+  return used.map((category) => ({
+    params: { category },
+    props: {
+      category,
+      posts: posts.filter((p) => p.data.category === category),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+const info = CATEGORIES[category];
+---
+<BaseLayout
+  title={`${info.label} guides`}
+  description={info.intro}
+>
+  <section class="container list">
+    <p class="crumb"><a href="/blog/">All articles</a></p>
+    <h1>{info.label}</h1>
+    <p class="intro">{info.intro}</p>
+    <div class="grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .list { padding-block: var(--space-12) var(--space-16); }
+  .crumb { font-size: 0.875rem; margin: 0 0 var(--space-3); }
+  .crumb a { color: var(--color-stone); }
+  .intro { max-width: var(--width-read); color: var(--color-stone); }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+</style>
